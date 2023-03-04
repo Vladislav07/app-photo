@@ -71,12 +71,12 @@ const styles = () => {
 const scss = () => {
   return src('src/sass/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(autoprefixer({ browsers: ['last 3 versions'], cascade: false }))
-    .pipe(concat('index.css'))
+    .pipe(sass.sync())
+    //.pipe(autoprefixer({ browsers: ['last 3 versions'], cascade: false }))
+   // .pipe(concat('index.css'))
     .pipe(sourcemaps.write())
     .pipe(dest('src/css/'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 };
 
 const scripts = () => {
@@ -96,10 +96,11 @@ const images = () => {
     './src/img/**/*.png',
     './src/img/**/*.jpeg',
   ])
-    .pipe(sourcemaps.init())
-    .pipe(image())
-    .pipe(sourcemaps.write())
-    .pipe(dest('dev/img'));
+   // .pipe(sourcemaps.init())
+   // .pipe(image())
+  //  .pipe(sourcemaps.write())
+    .pipe(dest('dev/img'))
+    .pipe(browserSync.stream());
 };
 
 const svgSprites = () => {
@@ -131,7 +132,7 @@ const watchFiles = () => {
 watch('src/**/*.html', pages);
 watch('src/css/**/*.css', styles);
 watch('src/js/**/*.js', scripts);
-watch(['src/img/**/*.jpg', 'src/img/**/*.jpeg', 'src/img/**/*.png'], images);
+watch(['src/img/**/*.jpg', 'src/img/**/*.jpeg', 'src/img/**/*.png','src/img/**/*.svg'], images);
 watch('src/img/sprite/**/*.svg', svgSprites);
 watch('./src/sass/**/*.scss', scss);
 
@@ -140,7 +141,7 @@ watch('./src/sass/**/*.scss', scss);
 const minifyHTML = () => {
   return src('dev/**/*.html')
     .pipe(
-      minHTML({
+      htmlmin({
         collapseWhitespace: true,
       })
     )
@@ -186,10 +187,12 @@ const buildScripts = () => {
     .pipe(dest('build'));
 };
 
+exports.scss = scss;
 exports.clean = clean;
 exports.default = series(
   clean,
   pages,
+  scss, 
   styles,
   scripts,
   images,

@@ -1,1 +1,1 @@
-{"version":3,"sources":["header.js"],"names":["fn","arg","console","log"],"mappings":"AAAA,MAAAA,GAAAC,IACAC,QAAAC,IAAAF,IADAD,GAAA","file":"main.js","sourcesContent":["const fn = (arg) => {\n\tconsole.log(arg);\n};"]}
+{"version":3,"sources":["header.js"],"names":["fn","arg","console","log"],"mappings":"AAAA,MAAAA,GAAAC,IACAC,QAAAC,IAAAF,IADAD,GAAA","file":"main.js","sourcesContent":["const fn = (arg) => {\r\n\tconsole.log(arg);\r\n};"]}

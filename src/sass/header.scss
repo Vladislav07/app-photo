@@ -1,11 +1,209 @@
+@import 'var'; 
+
 .header {
+  margin-bottom: 50px;
+  background-color: $color-bacground-dark;
+  box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+
+
   &__container {
+    padding:28px 315px ;
     position: relative;
     align-items: center;
     justify-content: space-between;
-    border-radius: 32px;
   }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__burger {
+    transition: outline 0.3s ease-in-out;
+  }
+
+  &__burger:hover {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+
+  &__burger:active .burger__line {
+    background-color: $color-active;
+  }
+
+  &__burger:active::after {
+    background-color: $color-active;
+    width: 33%;
+  }
+
+  &__burger:active::before {
+    background-color: $color-active;
+  }
+
+  &__burger:active {
+    outline: n&
+  }
+
+  &__search {
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    padding-left: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 18px;
+    right: 0;
+    top: 8px;
+    width: 539px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px 0px #0000001f;
+    visibility: hidden;
+    transform: translateX(120%);
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  &__search--active {
+    visibility: visible;
+    transform: none;
+  }
+
+  &__search--active+.search {
+    z-index: 1000;
+  }
+
+  &__request {
+    font-size: 18px;
+    line-height: 22px;
+    width: 412px;
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    outline: none;
+  }
+
+  &__close-search {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    transition: outline-color 0.3s ease-in-out;
+  }
+
+  &__icon-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #cacaca;
+    border-radius: 50%;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &__icon-close::before,
+  &__icon-close::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    height: 2px;
+    width: 14px;
+    background-color: #cacaca;
+    transform-origin: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &__icon-close::before {
+    transform: rotate(45deg);
+  }
+
+  &__icon-close::after {
+    transform: rotate(-45deg);
+  }
+
+  &__close-search:hover:not(:focus) .header__icon-close {
+    border-color: $color-accent;
+  }
+
+  &__close-search:hover:not(:focus) .header__icon-close::before,
+  &__close-search:hover:not(:focus) .header__icon-close::after {
+    background-color: $color-accent;
+  }
+
+  &__close-search:focus {
+    outline-offset: 2px;
+    outline: 2px solid $color-accent;
+  }
+
+  &__close-search:active .header__icon-close {
+    border-color: var(--color-dark);
+  }
+
+  &__close-search:active .header__icon-close::before,
+  &__close-search:active .header__icon-close::after {
+    background-color: var(--color-dark);
+  }
+
+  &__close-search:active {
+    outline: none;
+  }
+
 }
+
+.nav {
+  align-items: center;
+
+  &__items {
+    align-items: center;
+    margin-right: 260px;
+  }
+
+  &__link {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 80px;
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: $color-accent;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  &__link:focus {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+
+  &__link:hover:not(:focus)::after {
+    transform: scaleX(1);
+  }
+
+  &__link:active {
+    outline: none;
+    color: $color-active;
+  }
+
+  &__link:active::after {
+    background-color: $color-active;
+  }
+
+}
+
 
 .burger {
   position: relative;
@@ -16,7 +214,7 @@
   height: 23px;
   background-color: transparent;
 
-  &__line{
+  &__line {
     position: absolute;
     right: 0;
     top: 50%;
@@ -25,5 +223,71 @@
     background-color: #333;
     transform: translateY(-50%);
     transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+
+  &__line:active {
+    background-color: $color-active;
+    width: 66%;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+  }
+
+  &::after {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+.search {
+  display: block;
+  width: 25px;
+  height: 25px;
+
+
+  & svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & svg rect {
+    fill: var(--color-dark);
+    transition: fill 0.3s ease-in-out;
+  }
+
+  & svg circle {
+    stroke: var(--color-dark);
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  &:hover:not(:focus) svg rect {
+    fill: $color-accent;
+  }
+
+  &:hover:not(:focus) svg circle {
+    stroke: $color-accent;
+  }
+
+  &:focus {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+  }
+
+  &:active svg rect {
+    fill: $color-active;
+  }
+
+  &:active svg circle {
+    stroke: $color-active;
   }
 }
