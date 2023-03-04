@@ -1,3 +1,4 @@
+'use strict';
 const { src, dest, series, watch, parallel } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass')(require('sass'));
@@ -73,7 +74,7 @@ const scss = () => {
     .pipe(sourcemaps.init())
     .pipe(sass.sync())
     //.pipe(autoprefixer({ browsers: ['last 3 versions'], cascade: false }))
-   // .pipe(concat('index.css'))
+    // .pipe(concat('index.css'))
     .pipe(sourcemaps.write())
     .pipe(dest('src/css/'))
     .pipe(browserSync.stream())
@@ -96,9 +97,9 @@ const images = () => {
     './src/img/**/*.png',
     './src/img/**/*.jpeg',
   ])
-   // .pipe(sourcemaps.init())
-   // .pipe(image())
-  //  .pipe(sourcemaps.write())
+    .pipe(sourcemaps.init())
+    .pipe(image())
+     .pipe(sourcemaps.write())
     .pipe(dest('dev/img'))
     .pipe(browserSync.stream());
 };
@@ -122,17 +123,17 @@ const svgSprites = () => {
 const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: 'dev',
-      port: 3000,
-      notify: false,
+      baseDir: './dev',
     },
+    port:9500
+    
   });
 };
 
 watch('src/**/*.html', pages);
 watch('src/css/**/*.css', styles);
 watch('src/js/**/*.js', scripts);
-watch(['src/img/**/*.jpg', 'src/img/**/*.jpeg', 'src/img/**/*.png','src/img/**/*.svg'], images);
+watch(['src/img/**/*.jpg', 'src/img/**/*.jpeg', 'src/img/**/*.png', 'src/img/**/*.svg'], images);
 watch('src/img/sprite/**/*.svg', svgSprites);
 watch('./src/sass/**/*.scss', scss);
 
@@ -169,11 +170,11 @@ const buildStyles = () => {
 
 const buildImages = () => {
   return src([
-    'dev/images/**/*.jpg',
-    'dev/images/**/*.jpeg',
-    'dev/images/**/*.png',
-    'dev/images/**/*.svg',
-  ]).pipe(dest('build/images'));
+    'dev/img/**/*.jpg',
+    'dev/img/**/*.jpeg',
+    'dev/img/**/*.png',
+    'dev/img/**/*.svg',
+  ]).pipe(dest('build/img'));
 };
 
 const buildScripts = () => {
@@ -192,7 +193,7 @@ exports.clean = clean;
 exports.default = series(
   clean,
   pages,
-  scss, 
+  scss,
   styles,
   scripts,
   images,

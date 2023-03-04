@@ -261,12 +261,12 @@
   }
 
   & svg rect {
-    fill: var(--color-dark);
+    fill: red;
     transition: fill 0.3s ease-in-out;
   }
 
   & svg circle {
-    stroke: var(--color-dark);
+    stroke: red;
     transition: stroke 0.3s ease-in-out;
   }
 
