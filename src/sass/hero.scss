@@ -1,3 +1,5 @@
+@import 'mixin';
+
 .hero {
     display: grid;
     gap: 30px;
@@ -11,11 +13,12 @@
         grid-row-start: 1;
         grid-row-end: span 2;
         background-image: url('/img/hero_one.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include background_image;
+        background-position: center;
     }
     &__item__two {
         grid-column: 2/span 2;
-        grid-row-start: 1;
+        grid-row-start: 1;  
+      
     }
   }

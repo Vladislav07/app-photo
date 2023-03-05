@@ -1,17 +1,18 @@
-body {
+.app-photo {
+  max-width: 1900px;
   display: grid;
   grid-template-areas:
     'header header header'
     '... hero ...'
-    '... about ...'
+    'about about about'
     '... projects ...'
     '... contacts ...'
     'footer footer footer';
-  grid-template-rows: 80px  500px 500px 500px 500px 106px;
-  grid-template-columns:  minmax(30px, 315px) 1fr minmax(30px, 315px);
+  grid-template-rows: 80px 630px min(500px) 673px 514px 106px;
+  grid-template-columns:  1fr 1290px 1fr;
   row-gap: 80px;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   justify-content: stretch;
 }
 
@@ -33,6 +34,6 @@ body {
 #footer {
   grid-area: footer;
 }
-section{
-    background-color: aquamarine;
+section {
+  background-color: aquamarine;
 }
