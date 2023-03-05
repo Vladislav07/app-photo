@@ -9,17 +9,18 @@
     <link rel="stylesheet"  href="css/main.css">
 
   </head>
-  <body>
-    @@include('./parts/header.html')
-  <h1>some code ----</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi autem
-    ipsum similique dolorem in accusantium alias earum adipisci? Error nulla
-    tempora tenetur fuga minus, voluptatibus placeat nobis quis fugit
-  </p>
-  <img src="/img/img.jpg"/>
-   @@include('./parts/bottom.html')
-  <script src="js/main.js"></script>
+  <body>  
+    <header id="header" class="header">@@include('./parts/header.html')</header>
+    <section id="hero" class="hero">
+      <div class="hero__item hero__item__one"></div>
+      <div class="hero__item hero__item__two"></div>
+      <div class="hero__item hero__item__three"></div>
+      <div class="hero__item hero__item__four"></div>
+    </section>
+    <section id="about">About</section>
+    <section id="projects">Projects</section>
+    <section id="contacts">Contacts</section>
+    <footer id="footer">Footer</footer>
 </body>
 </html>
 

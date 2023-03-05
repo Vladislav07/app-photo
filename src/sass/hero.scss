@@ -1,0 +1,21 @@
+.hero {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 257px;
+    &__item{
+        background-color: brown;
+    }
+    &__item__one{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+        background-image: url('/img/hero_one.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__item__two {
+        grid-column: 2/span 2;
+        grid-row-start: 1;
+    }
+  }
