@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <div class="app-photo">
-      <header id="header" class="header">
-        <div class="container header__container flex">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div class="app-photo">
+    <header id="header" class="header">
+      <div class="container header__container flex">
   <button
     class="btn-reset burger header__burger"
     aria-label="навигация по странице"
@@ -77,24 +79,52 @@
   </button>
 </div>
 
-      </header>
-      <section id="hero" class="hero">
-        <div class="hero__item hero__item__one"></div>
-        <div class="hero__item hero__item__two">
-          <h3 class="hero__subTitle">
-            Работы участников предыдущего мастер-класса
-          </h3>
-          <img src="/img/hero_two.jpg" alt="" />
-        </div>
-        <div class="hero__item hero__item__three">
-          <img src="/img/hero_three.jpg" alt="" />
-        </div>
-        <div class="hero__item hero__item__four"></div>
-      </section>
-      <section id="about">About</section>
-      <section id="projects">Projects</section>
-      <section id="contacts">Contacts</section>
-      <footer id="footer">Footer</footer>
-    </div>
-  </body>
+    </header>
+    <section id="hero" class="hero">
+  <div class="hero__item hero__item__one">
+    <span class="hero__note">
+      Мастер-класс от&nbsp;Игоря Робова
+    </span>
+    <h1 class="hero__title">
+      Неоновый фотосет 2.0 7&nbsp;июля 20:00
+    </h1>
+    <button class="hero__btn">
+      Узнать больше
+    </button>
+  </div>
+  <div class="hero__item hero__item__two">
+    <h3 class="hero__subTitle">
+      Работы участников предыдущего мастер-класса
+    </h3>
+    <picture>
+      <source media="(max-width:1279px)" srcset="/img/hero_two_1024.jpg">
+      <source media="(max-width:1023px)" srcset="img/hero_two_768.jpg">
+      <source media="(max-width:767px)" srcset="img/hero_two_320.jpg">
+      <img src="/img/hero_two.jpg" alt="" />
+    </picture>
+  </div>
+  <div class="hero__item hero__item__three">
+    <picture>
+      <source media="(max-width:1279px)" srcset="img/hero_three_1024.jpg">
+      <source media="(max-width:1023px)" srcset="img/hero_three_768.jpg">
+      <source media="(max-width:767px)" srcset="img/hero_three_320.jpg">
+      <img src="/img/hero_three.jpg" alt="" />
+    </picture>
+  </div>
+  <div class="hero__item hero__item__four">
+    <picture>
+      <source media="(max-width:1279px)" srcset="img/hero_four_1024.jpg">
+      <source media="(max-width:1023px)" srcset="img/hero_four_768.jpg">
+      <source media="(max-width:767px)" srcset="img/hero_four_320.jpg">
+      <img src="/img/hero_four.jpg" alt="" />
+    </picture>
+  </div>
+</section>
+    <section id="about">About</section>
+    <section id="projects">Projects</section>
+    <section id="contacts">Contacts</section>
+    <footer id="footer">Footer</footer>
+  </div>
+</body>
+
 </html>
