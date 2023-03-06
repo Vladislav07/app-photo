@@ -1,0 +1,51 @@
+@import 'mixin';
+@import 'var';
+
+.about {
+  margin-bottom: 70px;
+
+  &__container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding-top: 32px;
+    padding-bottom: 68px;
+    background-color: $color-bacground-dark;
+
+  }
+
+  &__wrapper {
+    max-width: 1290px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  &__title {
+    max-width: 1290px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    @include sectionTitle;
+    color: #fff;
+  }
+
+  &__descr {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #cacaca;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__input {
+    @include formInput;
+    color: #cacaca;
+    background-color: #4A4A4A;
+    margin-bottom: 20px;
+
+  }
+}
