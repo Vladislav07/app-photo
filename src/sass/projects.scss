@@ -1,0 +1,69 @@
+@import 'mixin';
+@import 'var';
+
+.projects-section {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+.projects {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr;
+
+  &__item {
+    img{
+         margin-bottom: 18px;
+    }
+
+  }
+  &__item__one {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  &__item__second {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+  }
+  &__item__third {
+    grid-column: 5 / span 2;
+    grid-row: 1;
+  }
+  &__item__fourth {
+    grid-column: 7 / span 6;
+    grid-row: 1;
+    @include backgroundImage('/img/projects_background_01.jpg');
+    color: #fff;
+  }
+  &__item__fifth {
+    grid-column: 1 / span 6;
+    grid-row: 2;
+    @include backgroundImage('/img/projects_background_02.jpg');
+     color: #fff;
+  }
+  &__item__sixth {
+    grid-column: 7 / span 3;
+    grid-row: 2;
+  }
+  &__item__seventh {
+    grid-column: 10 / span 3;
+    grid-row: 2;
+  }
+  &__descr {
+    margin-bottom: 13px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-bacground-dark;;
+  }
+  &__date{
+    color: #999;
+  }
+  &__calendar{
+   
+  }
+  .date-created {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}

@@ -3,3 +3,27 @@
     background-size:cover;
 
 }
+@mixin date {
+   font-size: 12px;
+   line-height: 22px;
+   font-weight: 400; 
+   color: #999;
+}
+
+@mixin backgroundImage($path) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+}
+
+@mixin formInput{
+    padding: 15px 23px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #999;
+    background-color: #E9E9E9;
+    margin-bottom: 20px;
+    border: none;
+}

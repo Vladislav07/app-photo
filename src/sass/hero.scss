@@ -1,76 +1,74 @@
 @import 'mixin';
 
 .hero {
-    display: grid;
-    gap: 30px;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 257px;
-   
-    &__item {
-        background-color: brown;
-    }
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 257px;
 
-    &__item__one {
-        grid-column: 1 / 2;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        grid-row-end: span 2;
-        background-image: url('/img/hero_one.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        padding: 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: end;
-        width: 630px;
-    }
+  &__item {
+    background-color: brown;
+  }
 
-    &__item__two {
-        grid-column: 2/span 2;
-        grid-row-start: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+  &__item__one {
+    grid-column: 1 / 2;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    @include backgroundImage('/img/hero_one.jpg');
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    
+  }
 
-    &__subTitle {
-        margin: 0;
-        padding: 0;
-        font-size: 24px;
-        list-style: 25px;
-        font-weight: 700;
-    }
+  &__item__two {
+    grid-column: 2 / span 2;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-    &__note {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        color: #fff;
-    }
+  &__subTitle {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    list-style: 25px;
+    font-weight: 700;
+  }
 
-    &__title{
-        max-width: 427px;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 37px;
-        color: #fff;
-    }
+  &__note {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+  }
 
+  &__title {
+    max-width: 427px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 37px;
+    color: #fff;
+  }
 }
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 
 @media (max-width: 1279px) {
-    
-  }
-  
-  @media (max-width: 1023px) {
-    
-  }
-  
-  @media (max-width: 767px) {
-    
-  }
+}
+
+@media (max-width: 1023px) {
+}
+
+@media (max-width: 767px) {
+}
+
+.hero {
+  max-width: 1290px;
+  margin: 0 auto;
+}

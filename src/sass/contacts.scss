@@ -1,0 +1,50 @@
+@import 'mixin';
+@import 'var';
+
+.contacts {
+  max-width: 1290px;
+  margin: 0 auto;
+  &__wrapper {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 410px;
+    grid-template-rows: 1fr;
+  }
+  &__map {
+    @include backgroundImage('/img/map.jpg');
+    height: 460px;
+  }
+  &__request {
+    display: flex;
+    flex-direction: column;
+    // width: 410px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #202020;
+  }
+  &__descr {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $color-bacground-dark;
+    margin-bottom: 14px;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  &__input {
+    height: 50px;
+    width: 100%;
+    @include formInput;
+  }
+  &__text {
+    height: 150px;
+    @include formInput;
+  }
+}

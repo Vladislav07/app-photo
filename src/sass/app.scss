@@ -1,51 +1,51 @@
-.app-photo {
-  max-width: 1900px;
-  display: grid;
-  grid-template-areas:
-    'header header header'
-    '... hero ...'
-    'about about about'
-    '... projects ...'
-    '... contacts ...'
-    'footer footer footer';
-  grid-template-rows: 80px max-content min(500px) 673px 514px 106px;
-  grid-template-columns:  1fr max-content 1fr;
-  row-gap: 80px;
-  height: 100vh;
-  margin: 0 auto;
-  justify-content: stretch;
-}
+// .app-photo {
+//   max-width: 1900px;
+//   display: grid;
+//   grid-template-areas:
+//     'header header header'
+//     '... hero ...'
+//     'about about about'
+//     '... projects ...'
+//     '... contacts ...'
+//     'footer footer footer';
+//   grid-template-rows: 80px max-content min(500px) 673px 514px 106px;
+//   grid-template-columns:  1fr max-content 1fr;
+//   row-gap: 80px;
+//   height: 100vh;
+//   margin: 0 auto;
+//   justify-content: stretch;
+// }
 
-#header {
-  grid-area: header;
-}
-#hero {
-  grid-area: hero;
-}
-#about {
-  grid-area: about;
-}
-#projects {
-  grid-area: projects;
-}
-#contacts {
-  grid-area: contacts;
-}
-#footer {
-  grid-area: footer;
-}
-section {
-  background-color: aquamarine;
-}
+// #header {
+//   grid-area: header;
+// }
+// #hero {
+//   grid-area: hero;
+// }
+// #about {
+//   grid-area: about;
+// }
+// #projects {
+//   grid-area: projects;
+// }
+// #contacts {
+//   grid-area: contacts;
+// }
+// #footer {
+//   grid-area: footer;
+// }
+// section {
+//   background-color: aquamarine;
+// }
 
-@media (max-width: 1279px) {
+// @media (max-width: 1279px) {
     
-}
+// }
 
-@media (max-width: 1023px) {
+// @media (max-width: 1023px) {
   
-}
+// }
 
-@media (max-width: 767px) {
+// @media (max-width: 767px) {
   
-}
+// }
