@@ -1,32 +1,43 @@
 <section id="hero" class="hero">
-  <div class="hero__item hero__item__one">
-    <span class="hero__note"> Мастер-класс от&nbsp;Игоря Робова </span>
-    <h1 class="hero__title">Неоновый фотосет 2.0 7&nbsp;июля 20:00</h1>
-    <button class="hero__btn">Узнать больше</button>
-  </div>
-  <div class="hero__item hero__item__two">
-    <h3 class="hero__subTitle">Работы участников предыдущего мастер-класса</h3>
-     <picture>
-      <source srcset="img/hero_two_1024.jpg" media="(max-width:1279px)" type="image/jpg" />
-      <!-- <source media="(max-width:1023px)" srcset="img/hero_two_768.jpg" />
-      <source media="(max-width:767px)" srcset="img/hero_two_320.jpg" /> -->
-      <img src="img/hero_two.jpg" alt="" >
-    </picture> 
-  </div>
-  <div class="hero__item hero__item__three">
-    <picture>
-      <source srcset="img/hero_three_1024.jpg" media="(max-width:1279px)" />
-      <!-- <source media="(max-width:1023px)" srcset="img/hero_three_768.jpg" />
-      <source media="(max-width:767px)" srcset="img/hero_three_320.jpg" /> -->
-      <img src="img/hero_three.jpg" alt="" width="auto" >
-    </picture>
-  </div>
-  <div class="hero__item hero__item__four">
-    <picture>
-      <source media="(max-width:1279px)" srcset="img/hero_four_1024.jpg" />
-      <!-- <source media="(max-width:1023px)" srcset="img/hero_four_768.jpg" />
-      <source media="(max-width:767px)" srcset="img/hero_four_320.jpg" /> -->
-      <img src="img/hero_four.jpg" alt="" >
-    </picture>
+  <div class="hero__container">
+    <div class="hero__wrapper">
+      <div class="hero__item hero__item__one">
+        <span class="hero__note"> Мастер-класс от&nbsp;Игоря Робова </span>
+        <h1 class="hero__title">Неоновый фотосет 2.0 7&nbsp;июля 20:00</h1>
+        <button class="hero__btn">Узнать больше</button>
+        <span class="hero__label">#мастеркласс</span>
+      </div>
+      <div class="hero__item hero__item__two">
+        <h3 class="hero__subTitle">
+          Работы участников предыдущего мастер-класса
+        </h3>
+        <picture>
+          <source
+            srcset="img/hero_two_1024.jpg"
+            media="(max-width:1279px)"
+            type="image/jpg"
+          />
+          <source media="(max-width:1023px)" srcset="img/hero_two_768.jpg" />
+          <source media="(max-width:475px)" srcset="img/hero_two_320.jpg" />
+          <img src="img/hero_two.jpg" alt="" />
+        </picture>
+      </div>
+      <div class="hero__item hero__item__three">
+        <picture>
+          <source srcset="img/hero_three_1024.jpg" media="(max-width:1279px)" />
+          <source media="(max-width:1023px)" srcset="img/hero_three_768.jpg" />
+          <source media="(max-width:475px)" srcset="img/hero_three_320.jpg" />
+          <img src="img/hero_three.jpg" alt="" width="auto" />
+        </picture>
+      </div>
+      <div class="hero__item hero__item__four">
+        <picture>
+          <source media="(max-width:1279px)" srcset="img/hero_four_1024.jpg" />
+          <source media="(max-width:1023px)" srcset="img/hero_four_768.jpg" />
+          <source media="(max-width:475px)" srcset="img/hero_four_320.jpg" />
+          <img src="img/hero_four.jpg" alt="" />
+        </picture>
+      </div>
+    </div>
   </div>
 </section>

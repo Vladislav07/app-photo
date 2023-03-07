@@ -1,65 +1,67 @@
-<div class="container header__container flex">
-  <button
-    class="btn-reset burger header__burger"
-    aria-label="навигация по странице"
-  >
-    <span class="burger__line"></span>
-  </button>
-  <a class="logo header__logo">
-    <img src="/img/Logo.svg" alt="Логотип фото студии" />
-  </a>
-  <nav class="nav header__nav flex">
-    <ul class="nav__items list-reset flex">
-      <li class="nav__item nav__item__header">
-        <a href="#about" class="nav__link nav__link__header">О&nbsp;нас</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#progects" class="nav__link nav__link__header">Проекты</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#how" class="nav__link nav__link__header">Этапы</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#reviews" class="nav__link nav__link__header">Отзывы</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#contacts" class="nav__link nav__link__header">Контакты</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="header__search flex">
-    <label>
-      <span class="visually-hidden"> введите текст </span>
-      <input
-        type="search"
-        class="header__request"
-        placeholder="Что будем искать?"
-      />
-    </label>
-
+<header id="header" class="header">
+  <div class="header__container flex">
     <button
-      class="btn-reset header__close-search"
-      aria-label="закрыть окно поиска"
+      class="btn-reset burger header__burger"
+      aria-label="навигация по странице"
     >
-      <div class="header__icon-close"></div>
+      <span class="burger__line"></span>
+    </button>
+    <a class="logo header__logo">
+      <img src="/img/Logo.svg" alt="Логотип фото студии" />
+    </a>
+    <nav class="nav header__nav flex">
+      <ul class="nav__items list-reset flex">
+        <li class="nav__item">
+          <a href="#about" class="nav__link">О&nbsp;студии</a>
+        </li>
+        <li class="nav__item">
+          <a href="#projects" class="nav__link">Наши проекты</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Услуги</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Мастер-классы</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contacts" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__search flex">
+      <label>
+        <span class="visually-hidden"> введите текст </span>
+        <input
+          type="search"
+          class="header__request"
+          placeholder="Что будем искать?"
+        />
+      </label>
+
+      <button
+        class="btn-reset header__close-search"
+        aria-label="закрыть окно поиска"
+      >
+        <div class="header__icon-close"></div>
+      </button>
+    </div>
+    <button class="btn-reset search" aria-label="найти">
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 26 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="19.5138"
+          y="18.5495"
+          width="8"
+          height="2"
+          transform="rotate(45 19.5138 18.5495)"
+        />
+        <circle cx="11.5" cy="11.5" r="10.5" stroke-width="2" />
+      </svg>
     </button>
   </div>
-  <button class="btn-reset search" aria-label="найти">
-    <svg
-      width="26"
-      height="26"
-      viewBox="0 0 26 26"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="19.5138"
-        y="18.5495"
-        width="8"
-        height="2"
-        transform="rotate(45 19.5138 18.5495)"
-      />
-      <circle cx="11.5" cy="11.5" r="10.5" stroke-width="2" />
-    </svg>
-  </button>
-</div>
+</header>

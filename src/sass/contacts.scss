@@ -4,6 +4,7 @@
 .contacts {
   max-width: 1290px;
   margin: 0 auto;
+  margin-bottom: 68px;
 
   &__wrapper {
     display: grid;
@@ -26,9 +27,7 @@
   &__title {
     margin: 0;
     margin-bottom: 5px;
-    font-size: 22px;
-    line-height: 24px;
-    font-weight: 400;
+    @include formTitle;
     color: #202020;
   }
 
@@ -62,6 +61,11 @@
     background-color: #E9E9E9;
     margin-bottom: 20px;
 
+  }
+
+  &__btn{
+    margin-right: auto;
+    @include btnPrimary;
   }
 
 }

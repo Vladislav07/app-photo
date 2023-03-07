@@ -1,40 +1,44 @@
 @import 'mixin';
 
 .hero {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 257px;
+  margin-bottom: 68px;
+  &__container {
+    max-width: 1290px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content;
+  }
 
   &__item {
     background-color: brown;
   }
 
   &__item__one {
-    grid-column: 1 / 2;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: span 2;
+    position: relative;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
     @include backgroundImage('/img/hero_one.jpg');
     padding: 60px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: end;
-    
   }
 
   &__item__two {
-    grid-column: 2 / span 2;
+    grid-column: 3 / span 2;
     grid-row-start: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   &__subTitle {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 18px;
     font-size: 24px;
     list-style: 25px;
     font-weight: 700;
@@ -54,18 +58,64 @@
     line-height: 37px;
     color: #fff;
   }
+  &__label {
+    @include label;
+    top: 15px;
+    right: 15px;
+  }
+  &__btn {
+    @include btnPrimary;
+  }
 }
 
 @media (max-width: 1279px) {
+  .hero {
+    &__container {
+      max-width: 963px;
+    }
+
+    &__item__one {
+      padding: 30px;
+      @include backgroundImage('/img/hero_one_1024.jpg');
+    }
+  }
 }
 
 @media (max-width: 1023px) {
+  .hero {
+    &__container {
+      max-width: 714px;
+    }
+    &__item__one {
+      @include backgroundImage('/img/hero_one_768.jpg');
+    }
+  }
 }
 
-@media (max-width: 767px) {
-}
+@media (max-width: 475px) {
+  .hero {
+    &__container {
+      max-width: 278px;
+    }
 
-.hero {
-  max-width: 1290px;
-  margin: 0 auto;
+     &__wrapper {
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: max-content max-content max-content;
+    }
+
+    &__item__one {
+      position: relative;
+      grid-column: 1 / span 2;
+      grid-row: 1;
+      @include backgroundImage('/img/hero_one_320.jpg');
+    }
+
+    &__item__two {
+      grid-column: 1 / span 2;
+      grid-row: 2;
+    }
+
+   
+  }
 }

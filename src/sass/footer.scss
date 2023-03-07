@@ -2,8 +2,57 @@
 @import 'var';
 
 .footer {
-  &__logo{
-
+  &__container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 16px;
+    background-color: $color-bacground-dark;
   }
-
+  &__wrapper {
+    max-width: 1290px;
+    display: grid;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+  }
+  &__item {
+    &__one {
+      display: flex;
+      flex-direction: column;
+    }
+    &__two {
+      justify-self: center;
+      max-width: 361px;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: #cacaca;
+    }
+    &__three {
+      justify-self: end;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+      color: #cacaca;
+    }
+  }
+  &__social {
+    display: flex;
+    justify-content: center;
+    svg:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__sign {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #e9e9e9;
+  }
+  &__title{
+    margin-bottom: 8px;
+  }
 }

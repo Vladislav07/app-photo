@@ -37,15 +37,29 @@
     color: #cacaca;
   }
 
+  &__img{
+    margin-bottom: 25px;
+  }
+
+  &__title__form {
+    @include formTitle;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
   &__form {
     display: flex;
+    justify-content: space-between;
   }
 
   &__input {
     @include formInput;
+    width: 100%;
+    margin-right: 30px;
     color: #cacaca;
     background-color: #4A4A4A;
-    margin-bottom: 20px;
-
+  }
+  &__btn{
+    @include btnPrimary;
   }
 }

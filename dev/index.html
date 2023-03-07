@@ -11,105 +11,116 @@
 
 <body>
   <div class="app-photo">
-    <header id="header" class="header">
-      <div class="container header__container flex">
-  <button
-    class="btn-reset burger header__burger"
-    aria-label="навигация по странице"
-  >
-    <span class="burger__line"></span>
-  </button>
-  <a class="logo header__logo">
-    <img src="/img/Logo.svg" alt="Логотип фото студии" />
-  </a>
-  <nav class="nav header__nav flex">
-    <ul class="nav__items list-reset flex">
-      <li class="nav__item nav__item__header">
-        <a href="#about" class="nav__link nav__link__header">О&nbsp;нас</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#progects" class="nav__link nav__link__header">Проекты</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#how" class="nav__link nav__link__header">Этапы</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#reviews" class="nav__link nav__link__header">Отзывы</a>
-      </li>
-      <li class="nav__item nav__item__header">
-        <a href="#contacts" class="nav__link nav__link__header">Контакты</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="header__search flex">
-    <label>
-      <span class="visually-hidden"> введите текст </span>
-      <input
-        type="search"
-        class="header__request"
-        placeholder="Что будем искать?"
-      />
-    </label>
-
+      <header id="header" class="header">
+  <div class="header__container flex">
     <button
-      class="btn-reset header__close-search"
-      aria-label="закрыть окно поиска"
+      class="btn-reset burger header__burger"
+      aria-label="навигация по странице"
     >
-      <div class="header__icon-close"></div>
+      <span class="burger__line"></span>
+    </button>
+    <a class="logo header__logo">
+      <img src="/img/Logo.svg" alt="Логотип фото студии" />
+    </a>
+    <nav class="nav header__nav flex">
+      <ul class="nav__items list-reset flex">
+        <li class="nav__item">
+          <a href="#about" class="nav__link">О&nbsp;студии</a>
+        </li>
+        <li class="nav__item">
+          <a href="#projects" class="nav__link">Наши проекты</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Услуги</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Мастер-классы</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contacts" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__search flex">
+      <label>
+        <span class="visually-hidden"> введите текст </span>
+        <input
+          type="search"
+          class="header__request"
+          placeholder="Что будем искать?"
+        />
+      </label>
+
+      <button
+        class="btn-reset header__close-search"
+        aria-label="закрыть окно поиска"
+      >
+        <div class="header__icon-close"></div>
+      </button>
+    </div>
+    <button class="btn-reset search" aria-label="найти">
+      <svg
+        width="26"
+        height="26"
+        viewBox="0 0 26 26"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          x="19.5138"
+          y="18.5495"
+          width="8"
+          height="2"
+          transform="rotate(45 19.5138 18.5495)"
+        />
+        <circle cx="11.5" cy="11.5" r="10.5" stroke-width="2" />
+      </svg>
     </button>
   </div>
-  <button class="btn-reset search" aria-label="найти">
-    <svg
-      width="26"
-      height="26"
-      viewBox="0 0 26 26"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect
-        x="19.5138"
-        y="18.5495"
-        width="8"
-        height="2"
-        transform="rotate(45 19.5138 18.5495)"
-      />
-      <circle cx="11.5" cy="11.5" r="10.5" stroke-width="2" />
-    </svg>
-  </button>
-</div>
-
-    </header>
+</header>
+ 
     <div class="main">
       <section id="hero" class="hero">
-  <div class="hero__item hero__item__one">
-    <span class="hero__note"> Мастер-класс от&nbsp;Игоря Робова </span>
-    <h1 class="hero__title">Неоновый фотосет 2.0 7&nbsp;июля 20:00</h1>
-    <button class="hero__btn">Узнать больше</button>
-  </div>
-  <div class="hero__item hero__item__two">
-    <h3 class="hero__subTitle">Работы участников предыдущего мастер-класса</h3>
-     <picture>
-      <source srcset="img/hero_two_1024.jpg" media="(max-width:1279px)" type="image/jpg" />
-      <!-- <source media="(max-width:1023px)" srcset="img/hero_two_768.jpg" />
-      <source media="(max-width:767px)" srcset="img/hero_two_320.jpg" /> -->
-      <img src="img/hero_two.jpg" alt="" >
-    </picture> 
-  </div>
-  <div class="hero__item hero__item__three">
-    <picture>
-      <source srcset="img/hero_three_1024.jpg" media="(max-width:1279px)" />
-      <!-- <source media="(max-width:1023px)" srcset="img/hero_three_768.jpg" />
-      <source media="(max-width:767px)" srcset="img/hero_three_320.jpg" /> -->
-      <img src="img/hero_three.jpg" alt="" width="auto" >
-    </picture>
-  </div>
-  <div class="hero__item hero__item__four">
-    <picture>
-      <source media="(max-width:1279px)" srcset="img/hero_four_1024.jpg" />
-      <!-- <source media="(max-width:1023px)" srcset="img/hero_four_768.jpg" />
-      <source media="(max-width:767px)" srcset="img/hero_four_320.jpg" /> -->
-      <img src="img/hero_four.jpg" alt="" >
-    </picture>
+  <div class="hero__container">
+    <div class="hero__wrapper">
+      <div class="hero__item hero__item__one">
+        <span class="hero__note"> Мастер-класс от&nbsp;Игоря Робова </span>
+        <h1 class="hero__title">Неоновый фотосет 2.0 7&nbsp;июля 20:00</h1>
+        <button class="hero__btn">Узнать больше</button>
+        <span class="hero__label">#мастеркласс</span>
+      </div>
+      <div class="hero__item hero__item__two">
+        <h3 class="hero__subTitle">
+          Работы участников предыдущего мастер-класса
+        </h3>
+        <picture>
+          <source
+            srcset="img/hero_two_1024.jpg"
+            media="(max-width:1279px)"
+            type="image/jpg"
+          />
+          <source media="(max-width:1023px)" srcset="img/hero_two_768.jpg" />
+          <source media="(max-width:475px)" srcset="img/hero_two_320.jpg" />
+          <img src="img/hero_two.jpg" alt="" />
+        </picture>
+      </div>
+      <div class="hero__item hero__item__three">
+        <picture>
+          <source srcset="img/hero_three_1024.jpg" media="(max-width:1279px)" />
+          <source media="(max-width:1023px)" srcset="img/hero_three_768.jpg" />
+          <source media="(max-width:475px)" srcset="img/hero_three_320.jpg" />
+          <img src="img/hero_three.jpg" alt="" width="auto" />
+        </picture>
+      </div>
+      <div class="hero__item hero__item__four">
+        <picture>
+          <source media="(max-width:1279px)" srcset="img/hero_four_1024.jpg" />
+          <source media="(max-width:1023px)" srcset="img/hero_four_768.jpg" />
+          <source media="(max-width:475px)" srcset="img/hero_four_320.jpg" />
+          <img src="img/hero_four.jpg" alt="" />
+        </picture>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -135,22 +146,21 @@
       </p>
       <div class="about__subscription">
         <picture>
-          <source srcset="img/hero_three_1024.jpg" media="(max-width:1279px)" />
-          <!-- <source media="(max-width:1023px)" srcset="img/hero_three_768.jpg" />
-        <source media="(max-width:767px)" srcset="img/hero_three_320.jpg" /> -->
-          <img src="img/about.jpg" alt="" width="auto" />
-          <h4 class="about__title__form">Подписаться на рассылку</h4>
-          <form action="" class="about__form form">
-            <input class="about__input" type="email" placeholder="email">
-            <button class="form__btn" type="submit">
-              Отправить
-            </button>
-          </form>
+          <source srcset="img/about_1024.jpg" media="(max-width:1279px)" />
+          <!-- <source media="(max-width:1023px)" srcset="/img/about_768.jpg" />
+          <source media="(max-width:767px)" srcset="/img/about_320.jpg" /> -->
+          <img class="about__img" src="img/about.jpg" alt="" width="auto" />
         </picture>
+        <h4 class="about__title__form">Подписаться на рассылку</h4>
+        <form action="" class="about__form form">
+          <input class="about__input" type="email" placeholder="email" />
+          <button class="about__btn" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
+
       <section id="projects" class="projects-section">
   <h2 class="section-title">Наши проекты</h2>
   <ul class="projects list-reset">
@@ -184,6 +194,7 @@
 <span class="date-created">16 июня</span>
 
       </div>
+      <span class="projects__label">#пейзаж</span>
     </li>
     <li class="projects__item projects__item__second">
       <img src="/img/projects_02.jpg" alt="" />
@@ -214,6 +225,7 @@
 <span class="date-created">28 мая</span>
 
       </div>
+      <span class="projects__label">#портрет</span>
     </li>
     <li class="projects__item projects__item__third">
       <img src="/img/projects_03.jpg" alt="" />
@@ -244,6 +256,7 @@
 <span class="date-created">19 августа</span>
 
       </div>
+      <span class="projects__label">#предмет</span>
     </li>
     <li class="projects__item projects__item__fourth">
       <div class="projects__calendar">
@@ -271,10 +284,11 @@
 
       </div>
       <h3 class="projects__title">Забвение</h3>
-      <p class="progects__descr">
+      <p class="projects__descr projects__descr__big">
         Играет важную роль в&nbsp;формировании глубокомысленных рассуждений
       </p>
-      <button class="progects__btn">О проекте</button>
+      <button class="projects__btn">О проекте</button>
+      <span class="projects__label">#fuji</span>
     </li>
     <li class="projects__item projects__item__fifth">
       <div class="projects__calendar">
@@ -302,11 +316,12 @@
 
       </div>
       <h3 class="projects__title">Cемантический разбор</h3>
-      <p class="progects__descr">
+      <p class="projects__descr projects__descr__big">
         В&nbsp;рамках спецификации современных стандартов, интерактивные
         прототипы
       </p>
-      <button class="progects__btn">О проекте</button>
+      <button class="projects__btn">О проекте</button>
+      <span class="projects__label">#проектзабвение</span>
     </li>
     <li class="projects__item projects__item__sixth">
       <img src="/img/projects_04.jpg" alt="" />
@@ -338,6 +353,7 @@
 <span class="date-created">30 марта</span>
 
       </div>
+      <span class="projects__label">#ретуш</span>
     </li>
     <li class="projects__item projects__item__seventh">
       <img src="/img/projects_05.jpg" alt="" />
@@ -369,6 +385,7 @@
 <span class="date-created">23 февраля</span>
 
       </div>
+      <span class="projects__label">#портрет</span>
     </li>
   </ul>
 </section>
@@ -388,7 +405,7 @@
            <input type="text" class="contacts__input" placeholder="Имя">
            <input type="email" class="contacts__input" placeholder="Email">
            <textarea class="contacts__text" name="descr" placeholder="Комментарий"></textarea>
-           <button type="submit">Отправить</button>
+           <button class="contacts__btn" type="submit">Отправить</button>
         </form>
     </div>
   </div>
@@ -398,7 +415,7 @@
     <footer id="footer" class="footer">
   <div class="footer__container">
     <div class="footer__wrapper">
-      <div class="footer__item">
+      <div class="footer__item footer__item__one">
         <a href="#" class="logo footer__logo">
           <img src="/img/Logo.svg" alt="Логотип фото студии" />
         </a>
@@ -406,13 +423,13 @@
           Фотостудия High pass® 2018–2020
         </span>
       </div>
-      <div class="footer__item">
+      <div class="footer__item footer__item__two">
         <p class="footer__text">
           Которая из&nbsp;моих фотографий самая любимая? Та, которую я&nbsp;собираюсь снять завтра.
           &copy;&nbsp;Имоджен Каннингем
         </p>
       </div>
-      <div class="footer__item">
+      <div class="footer__item footer__item__three">
         <h5 class="footer__title">
           Больше интересного:
         </h5>

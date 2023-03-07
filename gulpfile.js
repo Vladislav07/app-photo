@@ -70,14 +70,16 @@ const styles = () => {
 };
 
 const scss = () => {
-  return src('src/sass/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass.sync())
-    //.pipe(autoprefixer({ browsers: ['last 3 versions'], cascade: false }))
-    // .pipe(concat('index.css'))
-    .pipe(sourcemaps.write())
-    .pipe(dest('src/css/'))
-    .pipe(browserSync.stream())
+  return (
+    src('src/sass/*.scss')
+      .pipe(sourcemaps.init())
+      .pipe(sass.sync())
+      //.pipe(autoprefixer({ browsers: ['last 3 versions'], cascade: false }))
+      // .pipe(concat('index.css'))
+      .pipe(sourcemaps.write())
+      .pipe(dest('src/css/'))
+      .pipe(browserSync.stream())
+  );
 };
 
 const scripts = () => {
@@ -99,7 +101,7 @@ const images = () => {
   ])
     .pipe(sourcemaps.init())
     .pipe(image())
-     .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(dest('dev/img'))
     .pipe(browserSync.stream());
 };
@@ -123,17 +125,24 @@ const svgSprites = () => {
 const watchFiles = () => {
   browserSync.init({
     server: {
-      baseDir: './dev',
+      baseDir: 'dev',
     },
-    port:9500
-    
+    port: 9500,
   });
 };
 
 watch('src/**/*.html', pages);
 watch('src/css/**/*.css', styles);
 watch('src/js/**/*.js', scripts);
-watch(['src/img/**/*.jpg', 'src/img/**/*.jpeg', 'src/img/**/*.png', 'src/img/**/*.svg'], images);
+watch(
+  [
+    'src/img/**/*.jpg',
+    'src/img/**/*.jpeg',
+    'src/img/**/*.png',
+    'src/img/**/*.svg',
+  ],
+  images
+);
 watch('src/img/sprite/**/*.svg', svgSprites);
 watch('./src/sass/**/*.scss', scss);
 

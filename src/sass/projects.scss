@@ -6,16 +6,22 @@
   margin: 0 auto;
 }
 .projects {
+  margin-bottom: 68px;
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 1fr;
 
   &__item {
-    img{
-         margin-bottom: 18px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    img {
+      margin-bottom: 18px;
     }
-
   }
   &__item__one {
     grid-column: 1 / span 2;
@@ -32,34 +38,73 @@
   &__item__fourth {
     grid-column: 7 / span 6;
     grid-row: 1;
+   
     @include backgroundImage('/img/projects_background_01.jpg');
     color: #fff;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
   }
   &__item__fifth {
     grid-column: 1 / span 6;
     grid-row: 2;
     @include backgroundImage('/img/projects_background_02.jpg');
-     color: #fff;
+    color: #fff;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 15px;
   }
+
   &__item__sixth {
     grid-column: 7 / span 3;
     grid-row: 2;
   }
+
   &__item__seventh {
     grid-column: 10 / span 3;
     grid-row: 2;
   }
+
+  &__title {
+     max-width: 250px;
+     font-size: 24px;
+     line-height: 24px;
+     font-weight: 700;
+     margin-bottom: 6px;
+  }
+
   &__descr {
-    margin-bottom: 13px;
+    max-width: 300px;
+    margin-bottom: auto;
     font-size: 16px;
     line-height: 22px;
-    color: $color-bacground-dark;;
+    color: $color-bacground-dark;
   }
-  &__date{
+
+  &__descr__big{
+    color: #fff;
+  }
+
+  &__date {
     color: #999;
   }
-  &__calendar{
-   
+  &__label {
+    @include label;
+    top: 7px;
+    right: 7px;
+  }
+
+  &__btn {
+    margin-right: auto;
+    padding: 15px 22px;
+    border: 3px solid $color-standart;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #fff;
+    background-color:transparent;
+  }
+  &__calendar {
   }
   .date-created {
     font-size: 12px;
