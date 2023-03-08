@@ -1,5 +1,4 @@
 <section id="hero" class="hero">
-  <div class="hero__container">
     <div class="hero__wrapper">
       <div class="hero__item hero__item__one">
         <span class="hero__note"> Мастер-класс от&nbsp;Игоря Робова </span>
@@ -12,13 +11,13 @@
           Работы участников предыдущего мастер-класса
         </h3>
         <picture>
+          <source media="(max-width:475px)" srcset="img/hero_two_320.jpg" />
+          <source media="(max-width:992px)" srcset="img/hero_two_768.jpg" />
           <source
             srcset="img/hero_two_1024.jpg"
             media="(max-width:1279px)"
             type="image/jpg"
           />
-          <source media="(max-width:1023px)" srcset="img/hero_two_768.jpg" />
-          <source media="(max-width:475px)" srcset="img/hero_two_320.jpg" />
           <img src="img/hero_two.jpg" alt="" />
         </picture>
       </div>
@@ -39,5 +38,4 @@
         </picture>
       </div>
     </div>
-  </div>
 </section>
