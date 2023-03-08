@@ -9,6 +9,8 @@
     margin: 0 auto;
     padding-top: 32px;
     padding-bottom: 68px;
+    padding-left: 30px;
+    padding-right: 30px;
     background-color: $color-bacground-dark;
 
   }
@@ -61,5 +63,54 @@
   }
   &__btn{
     @include btnPrimary;
+  }
+}
+@media (max-width: $media-xl) {
+  .about{
+    &__container {
+      max-width: 1024px;
+    }
+    &__form {
+      flex-direction: column;
+      align-content: flex-start;
+    }
+    &__btn{
+      margin-right: auto;
+    }
+    &__wrapper {
+      max-width: 963px;
+    }
+    &__input {
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width:$media-lg) {
+  .about{
+    &__container {
+      max-width: 768px;
+    }
+    &__btn{
+      margin-right: auto;
+    }
+    &__wrapper {
+      max-width: 714px;
+    }
+   
+  }
+}
+
+@media (max-width:$media-sm) {
+  .about{
+    &__container {
+      padding-top: 30px;
+      padding-bottom: 68px;
+    }
+    &__wrapper {
+      max-width: 278px;
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr max-content;
+    }
+   
   }
 }

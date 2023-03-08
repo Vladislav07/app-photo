@@ -289,3 +289,25 @@
     stroke: $color-active;
   }
 }
+
+
+@media (max-width: $media-xl) {
+  .header {
+    max-width: 1024px;
+
+    &__container {
+      max-width: 963px;
+    }
+  }
+  .nav {
+    &__item:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+}
+
+@media (max-width: $media-lg) {
+}
+
+@media (max-width: $media-sm) {
+}

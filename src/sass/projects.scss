@@ -1,17 +1,23 @@
 @import 'mixin';
 @import 'var';
 
-.projects-section {
+.projects {
   max-width: 1290px;
   margin: 0 auto;
-}
-.projects {
   margin-bottom: 68px;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 1fr;
 
+  &__title {
+    @include sectionTitle;
+    color: $color-bacground-dark;
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
   &__item {
     position: relative;
     display: flex;
@@ -38,7 +44,7 @@
   &__item__fourth {
     grid-column: 7 / span 6;
     grid-row: 1;
-   
+
     @include backgroundImage('/img/projects_background_01.jpg');
     color: #fff;
     padding-left: 30px;
@@ -65,12 +71,12 @@
     grid-row: 2;
   }
 
-  &__title {
-     max-width: 250px;
-     font-size: 24px;
-     line-height: 24px;
-     font-weight: 700;
-     margin-bottom: 6px;
+  &__title__advert {
+    max-width: 250px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
   }
 
   &__descr {
@@ -81,7 +87,7 @@
     color: $color-bacground-dark;
   }
 
-  &__descr__big{
+  &__descr__big {
     color: #fff;
   }
 
@@ -102,13 +108,137 @@
     line-height: 19px;
     font-weight: 700;
     color: #fff;
-    background-color:transparent;
+    background-color: transparent;
   }
   &__calendar {
   }
-  .date-created {
-    font-size: 12px;
-    line-height: 22px;
-    font-weight: 400;
+}
+.date-created {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+@media (max-width: $media-xl) {
+  .projects {
+    max-width: 962px;
+    &__list {
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    &__item__one {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+    &__item__second {
+      grid-column: 3 / span 2;
+      grid-row: 1;
+    }
+    &__item__third {
+      grid-column: 5 / span 4;
+      grid-row: 1;
+    }
+    &__item__fourth {
+      grid-column: 1 / span 5;
+      grid-row: 2;
+      @include backgroundImage('/img/projects_background_01_1024.jpg');
+    }
+    &__item__fifth {
+      grid-column: 4 / span 5;
+      grid-row: 3;
+      @include backgroundImage('/img/projects_background_02_1024.jpg');
+    }
+
+    &__item__sixth {
+      grid-column: 6 / span 3;
+      grid-row: 2;
+    }
+
+    &__item__seventh {
+      grid-column: 1 / span 3;
+      grid-row: 3;
+    }
+  }
+}
+@media (max-width: $media-lg) {
+  .projects {
+    max-width: 714px;
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    &__item__one {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+    &__item__second {
+      grid-column: 3 / span 2;
+      grid-row: 1;
+    }
+    &__item__third {
+      grid-column: 5 / span 2;
+      grid-row: 1;
+    }
+    &__item__fourth {
+      grid-column: 1 / span 6;
+      grid-row: 2;
+      @include backgroundImage('/img/projects_background_01_768.jpg');
+    }
+    &__item__fifth {
+      grid-column: 1 / span 6;
+      grid-row: 4;
+      @include backgroundImage('/img/projects_background_02_768.jpg');
+    }
+
+    &__item__sixth {
+      grid-column: 1 / span 3;
+      grid-row: 3;
+    }
+
+    &__item__seventh {
+      grid-column: 4 / span 3;
+      grid-row: 3;
+    }
+  }
+}
+@media (max-width: $media-sm) {
+  .projects {
+    max-width: 278px;
+    &__list {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 422px 1fr 1fr 422px ;
+    }
+    &__item__one {
+      grid-column: 1 ;
+      grid-row: 1;
+    }
+    &__item__second {
+      grid-column: 1 ;
+      grid-row: 2;
+    }
+    &__item__third {
+      grid-column: 1 ;
+      grid-row: 3;
+    }
+    &__item__fourth {
+      grid-column: 1 ;
+      grid-row: 7;
+      @include backgroundImage('/img/projects_background_01_320.jpg');
+    }
+    &__item__fifth {
+      grid-column: 1 ;
+      grid-row: 4;
+      @include backgroundImage('/img/projects_background_02_320.jpg');
+    }
+
+    &__item__sixth {
+      grid-column: 1 ;
+      grid-row: 5;
+    }
+
+    &__item__seventh {
+      grid-column: 1 ;
+      grid-row: 6;
+    }
   }
 }

@@ -1,8 +1,13 @@
-<section id="projects" class="projects-section">
-  <h2 class="section-title">Наши проекты</h2>
-  <ul class="projects list-reset">
+<section id="projects" class="projects">
+  <h2 class="projects__title">Наши проекты</h2>
+  <ul class="projects__list list-reset">
     <li class="projects__item projects__item__one">
-      <img src="/img/projects_01.jpg" alt="" />
+      <picture>
+        <source srcset="img/projects_01_320.jpg" media="(max-width:576px)" />
+        <source srcset="img/projects_01_1024.jpg" media="(max-width:1279px)" />
+        <img src="/img/projects_01.jpg" alt="" />
+      </picture>
+
       <p class="projects__descr">
         Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными
         до&nbsp;степени...
@@ -13,7 +18,11 @@
       <span class="projects__label">#пейзаж</span>
     </li>
     <li class="projects__item projects__item__second">
-      <img src="/img/projects_02.jpg" alt="" />
+      <picture>
+        <source srcset="img/projects_02_768.jpg" media="(max-width:992px)" />
+        <source srcset="img/projects_02_1024.jpg" media="(max-width:1279px)" />
+        <img src="/img/projects_02.jpg" alt="" />
+      </picture>
       <p class="projects__descr">
         В&nbsp;своём стремлении улучшить опыт мы&nbsp;упускаем, что явные...
       </p>
@@ -23,7 +32,12 @@
       <span class="projects__label">#портрет</span>
     </li>
     <li class="projects__item projects__item__third">
-      <img src="/img/projects_03.jpg" alt="" />
+      <picture>
+        <source srcset="img/projects_03_320.jpg" media="(max-width:576px)" />
+        <source srcset="img/projects_03_768.jpg" media="(max-width:992px)" />
+        <source srcset="img/projects_03_1024.jpg" media="(max-width:1279px)" />
+        <img src="/img/projects_03.jpg" alt="" />
+      </picture>
       <p class="projects__descr">
         Равным образом, высокое качество позиционных...
       </p>
@@ -36,7 +50,7 @@
       <div class="projects__calendar">
         @@include('./date.html',{ "date":"19 августа"})
       </div>
-      <h3 class="projects__title">Забвение</h3>
+      <h3 class="projects__title__advert">Забвение</h3>
       <p class="projects__descr projects__descr__big">
         Играет важную роль в&nbsp;формировании глубокомысленных рассуждений
       </p>
@@ -56,7 +70,11 @@
       <span class="projects__label">#проектзабвение</span>
     </li>
     <li class="projects__item projects__item__sixth">
-      <img src="/img/projects_04.jpg" alt="" />
+      <picture>
+        <source srcset="img/projects_04_320.jpg" media="(max-width:576px)" />
+        <source srcset="img/projects_04_1024.jpg" media="(max-width:1279px)" />
+        <img src="/img/projects_04.jpg" alt="" />
+      </picture>
       <p class="projects__descr">
         Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день
         остаются уделом либералов... до&nbsp;степени...
@@ -67,7 +85,11 @@
       <span class="projects__label">#ретуш</span>
     </li>
     <li class="projects__item projects__item__seventh">
-      <img src="/img/projects_05.jpg" alt="" />
+      <picture>
+        <source srcset="img/projects_05_320.jpg" media="(max-width:576px)" />
+        <source srcset="img/projects_05_1024.jpg" media="(max-width:1279px)" />
+        <img src="/img/projects_05.jpg" alt="" />
+      </picture>
       <p class="projects__descr">
         С учётом сложившейся международной обстановки, новая модель
         организационной…

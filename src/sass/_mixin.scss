@@ -64,3 +64,11 @@
   flex-direction: column;
  justify-content: space-between;
 }
+
+@mixin sectionTitle{
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 400;
+} 
+  
+

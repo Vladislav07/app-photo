@@ -39,7 +39,6 @@
     margin-bottom: 14px;
   }
 
-
   &__form {
     display: flex;
     flex-direction: column;
@@ -49,23 +48,63 @@
     @include formInput;
     height: 50px;
     color: #999;
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
     margin-bottom: 20px;
-
   }
 
   &__text {
     @include formInput;
     height: 150px;
     color: #999;
-    background-color: #E9E9E9;
+    background-color: #e9e9e9;
     margin-bottom: 20px;
-
   }
 
-  &__btn{
+  &__btn {
     margin-right: auto;
     @include btnPrimary;
   }
+}
 
+@media (max-width: $media-xl) {
+  .contacts {
+    max-width: 962px;
+
+    &__wrapper {
+      grid-template-columns: 1fr 342px;
+      grid-template-rows: 1fr;
+    }
+
+    &__map {
+      @include backgroundImage('/img/map_1024.jpg');
+    }
+  }
+}
+@media (max-width: $media-lg) {
+  .contacts {
+    max-width: 714px;
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    &__map {
+      @include backgroundImage('/img/map_768.jpg');
+    }
+  }
+}
+@media (max-width: $media-sm) {
+  .contacts {
+    max-width: 278px;
+
+    &__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 472px 1fr;
+    }
+
+    &__map {
+      @include backgroundImage('/img/map_320.jpg');
+    }
+  }
 }
