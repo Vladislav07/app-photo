@@ -1,15 +1,15 @@
 @import 'mixin';
 
 .hero {
-  margin-bottom: 68px;
+  margin-bottom: 66px;
    
   &__wrapper {
-    max-width: 1290px;
+    max-width: 1293px;
     margin: 0 auto;
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: min(343px) 257px;
+    grid-template-rows: max-content max-content;
   }
 
   &__item {
@@ -36,6 +36,7 @@
   }
 
   &__subTitle {
+    font-family: 'TTFirsNeue';
     margin-bottom: 18px;
     font-size: 24px;
     list-style: 25px;
@@ -50,6 +51,7 @@
   }
 
   &__title {
+    font-family: 'TTFirsNeue';
     max-width: 427px;
     margin-bottom: 20px;
     font-weight: 700;

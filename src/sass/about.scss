@@ -7,7 +7,7 @@
   &__container {
     max-width: 1900px;
     margin: 0 auto;
-    padding-top: 32px;
+    padding-top: 37px;
     padding-bottom: 68px;
     padding-left: 30px;
     padding-right: 30px;
@@ -25,11 +25,12 @@
   }
 
   &__title {
-    max-width: 1290px;
+    max-width: 1293px;
     margin: 0 auto;
     margin-bottom: 5px;
     @include sectionTitle;
     color: #fff;
+    letter-spacing: 1px;
   }
 
   &__descr {
@@ -40,13 +41,14 @@
   }
 
   &__img{
-    margin-bottom: 25px;
+    margin-bottom: 19px;
   }
 
   &__title__form {
     @include formTitle;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     color: #fff;
+   
   }
 
   &__form {

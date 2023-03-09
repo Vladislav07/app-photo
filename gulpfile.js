@@ -14,7 +14,8 @@ const htmlmin = require('gulp-htmlmin');
 const notify = require('gulp-notify');
 const image = require('gulp-image');
 const concat = require('gulp-concat');
-const gulpFont = require('gulp-font');
+//const gulpFont = require('gulp-font');
+const fontmin = require('gulp-fontmin');
 
 const clean = () => {
   return del(['dev', 'build']);
@@ -123,19 +124,12 @@ const svgSprites = () => {
     .pipe(browserSync.stream());
 };
 
-const fonts = ()=> {
-  return src('src/fonts/**/*.{woff, woff2}', { read: false })
-      // .pipe(gulpFont({
-      //      ext: '.css',
-      //      fontface: 'src/fonts',
-      //      relative: '/fonts',
-      //      dest: 'dev/fonts',
-      //      embed: ['woff2','woff'],
-      //      collate: false
-      // }))
-      .pipe(dest('dev/fonts'))
-      .pipe(browserSync.stream());
-}
+const fonts = () => {
+  return src(['src/fonts/*.woff2', 'src/fonts/*.woff'])
+   // .pipe(fontmin())
+    .pipe(dest('dev/resources/fonts'))
+    .pipe(browserSync.stream());
+};
 
 const watchFiles = () => {
   browserSync.init({
@@ -160,7 +154,7 @@ watch(
 );
 watch('src/img/sprite/**/*.svg', svgSprites);
 watch('./src/sass/**/*.scss', scss);
-watch('./src/fonts/*.woff2, ./src/fonts/*.woff', scss);
+watch('./src/fonts/*.woff2, ./src/fonts/*.woff', fonts);
 
 //build
 

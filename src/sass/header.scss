@@ -4,7 +4,7 @@
 .header {
   max-width: 1900px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
   background-color: $color-bacground-dark;
 
   &__wrapper {
@@ -159,8 +159,6 @@
 }
 
 .nav {
-  align-items: center;
-
   &__items {
     align-items: center;
   }
@@ -257,6 +255,7 @@
   display: inline-block;
   width: 25px;
   height: 25px;
+  padding-left: 84px;
 
   & svg {
     display: block;
@@ -317,26 +316,25 @@
     max-width: 768px;
 
     &__wrapper {
-      
-      grid-template-columns: 1fr  1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: 80px 45px;
       padding: 0;
     }
-    &__nav{
+    &__nav {
       grid-column: 1 / span 2;
       grid-row: 2;
       width: 100%;
       height: 100%;
-      background-color:#4A4A4A;
+      background-color: #4a4a4a;
       justify-self: unset;
       display: flex;
       justify-content: center;
     }
-    &__searsh{
-       justify-self: end;
-       margin-right: 26px;
-    } 
-    &__logo{
+    &__searsh {
+      justify-self: end;
+      margin-right: 26px;
+    }
+    &__logo {
       padding-left: 26px;
     }
   }
@@ -344,36 +342,32 @@
 
 @media (max-width: $media-sm) {
   .header {
-   
-
     &__wrapper {
       width: 100%;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 70px 45px;
       padding: 0;
     }
-    &__nav{
+    &__nav {
       display: none;
     }
-    &__burger{
-     display: block;
-     grid-row: 2;
-     grid-column: 1 / span 2;
-     height: 100%;
-     background-color:#4A4A4A;
-     padding-left: 21px;
-
-
+    &__burger {
+      display: block;
+      grid-row: 2;
+      grid-column: 1 / span 2;
+      height: 100%;
+      background-color: #4a4a4a;
+      padding-left: 21px;
     }
-    &__searsh{
-       justify-self: end;
-       margin-right: 21px;
-    } 
-    &__logo{
+    &__searsh {
+      justify-self: end;
+      margin-right: 21px;
+    }
+    &__logo {
       padding-left: 21px;
     }
   }
-  .burger{
+  .burger {
     display: inline-block;
   }
 }

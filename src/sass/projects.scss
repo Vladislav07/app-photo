@@ -2,21 +2,22 @@
 @import 'var';
 
 .projects {
-  max-width: 1290px;
+  max-width: 1293px;
   margin: 0 auto;
   margin-bottom: 68px;
+  padding-top: 2px;
 
   &__title {
     @include sectionTitle;
     color: $color-bacground-dark;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 
   &__list {
     display: grid;
     gap: 30px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 300px 300px;
   }
   &__item {
     position: relative;
@@ -49,7 +50,7 @@
     color: #fff;
     padding-left: 30px;
     padding-bottom: 30px;
-    padding-top: 15px;
+    padding-top: 23px;
   }
   &__item__fifth {
     grid-column: 1 / span 6;
@@ -58,7 +59,7 @@
     color: #fff;
     padding-left: 30px;
     padding-bottom: 30px;
-    padding-top: 15px;
+    padding-top: 23px;
   }
 
   &__item__sixth {
@@ -72,15 +73,17 @@
   }
 
   &__title__advert {
+    font-family: 'TTFirsNeue';
     max-width: 250px;
     font-size: 24px;
     line-height: 24px;
     font-weight: 700;
     margin-bottom: 6px;
+    color: #fff;
   }
 
   &__descr {
-    max-width: 300px;
+    max-width: 295px;
     margin-bottom: auto;
     font-size: 16px;
     line-height: 22px;

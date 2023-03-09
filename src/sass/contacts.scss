@@ -5,6 +5,7 @@
   max-width: 1290px;
   margin: 0 auto;
   margin-bottom: 68px;
+  padding-top: 5px;
 
   &__wrapper {
     display: grid;
@@ -26,8 +27,8 @@
 
   &__title {
     margin: 0;
-    margin-bottom: 5px;
-    @include formTitle;
+    margin-bottom: 25px;
+    @include sectionTitle;
     color: #202020;
   }
 
@@ -42,6 +43,10 @@
   &__form {
     display: flex;
     flex-direction: column;
+  }
+
+  &__title__form{
+    @include  formTitle;
   }
 
   &__input {
