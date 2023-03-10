@@ -1,19 +1,20 @@
 @import 'mixin';
 
 .hero {
-  margin-bottom: 66px;
-   
+  margin-bottom: 68px;
+
+  &__container {
+    max-width: 1900px;
+    margin: 0 auto;
+  }
+
   &__wrapper {
     max-width: 1293px;
     margin: 0 auto;
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: max-content max-content;
-  }
-
-  &__item {
-
+    grid-template-rows: 343px 257px;
   }
 
   &__item__one {
@@ -39,7 +40,7 @@
     font-family: 'TTFirsNeue';
     margin-bottom: 18px;
     font-size: 24px;
-    list-style: 25px;
+    line-height: 24px;
     font-weight: 700;
   }
 
@@ -71,40 +72,73 @@
 
 @media (max-width: 1279px) {
   .hero {
+    &__container {
+      max-width: 1024px;
+    }
     &__wrapper {
       max-width: 963px;
-      grid-template-rows: max-content 186px;
+      grid-template-rows: 407px 186px;
     }
 
     &__item__one {
       padding: 30px;
       @include backgroundImage('/img/hero_one_1024.jpg');
     }
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    &__note {
+      margin-bottom: 8px;
+    }
+
+    &__subTitle {
+      margin-bottom: 26px;
+    }
   }
 }
 
 @media (max-width: 992px) {
   .hero {
+    margin-bottom: 68px;
+
+    &__container {
+      max-width: 768px;
+    }
+
     &__wrapper {
       max-width: 714px;
-      grid-template-rows: max-content 133px;
+      grid-template-rows: 289px 133px;
     }
+
     &__item__one {
       @include backgroundImage('/img/hero_one_768.jpg');
+    }
+
+    &__subTitle {
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 17px;
     }
   }
 }
 
 @media (max-width: 576px) {
   .hero {
+    &__container {
+      max-width: 320px;
+    }
     &__wrapper {
       max-width: 278px;
     }
 
-     &__wrapper {
+    &__wrapper {
       gap: 30px;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: max-content max-content max-content;
+      grid-template-rows: 422px 400px;
     }
 
     &__item__one {
@@ -118,7 +152,5 @@
       grid-column: 1 / span 2;
       grid-row: 2;
     }
-
-   
   }
 }

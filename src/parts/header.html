@@ -1,72 +1,73 @@
 <header id="header" class="header">
-  <div class="header__wrapper">
-    <div class="header__burger">
-    <button
-      class="btn-reset burger"
-      aria-label="навигация по странице"
-    >
-      <span class="burger__line"></span>
-    </button>
-    </div>
-    <a class="logo header__logo">
-      <picture>
-      <source media="(max-width:576px)" srcset="img/Logo_320.svg"/>
-      <img src="img/Logo.svg" alt="Логотип фото студии" />
-      </picture>
-    </a>
-    <nav class="nav header__nav">
-      <ul class="nav__items list-reset flex">
-        <li class="nav__item">
-          <a href="#about" class="nav__link">О&nbsp;студии</a>
-        </li>
-        <li class="nav__item">
-          <a href="#projects" class="nav__link">Наши проекты</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Услуги</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Мастер-классы</a>
-        </li>
-        <li class="nav__item">
-          <a href="#contacts" class="nav__link">Контакты</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="header__search flex">
-      <label>
-        <span class="visually-hidden"> введите текст </span>
-        <input
-          type="search"
-          class="header__request"
-          placeholder="Что будем искать?"
-        />
-      </label>
+  <div class="container header__container">
+    <div class="header__wrapper">
+      <div class="header__burger">
+        <button class="btn-reset burger" aria-label="навигация по странице">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+      <a class="logo header__logo">
+        <picture>
+          <source media="(max-width:575px)" srcset="img/Logo_320.svg" />
+          <source media="(max-width:1279px)" srcset="img/Logo_1024.svg" />
+          
+          <img src="img/Logo.svg" alt="Логотип фото студии" />
+        </picture>
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__items list-reset">
+          <li class="nav__item">
+            <a href="#about" class="nav__link">О&nbsp;студии</a>
+          </li>
+          <li class="nav__item">
+            <a href="#projects" class="nav__link">Наши проекты</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Услуги</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Мастер-классы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__search flex">
+        <label>
+          <span class="visually-hidden"> введите текст </span>
+          <input
+            type="search"
+            class="header__request"
+            placeholder="Что будем искать?"
+          />
+        </label>
 
-      <button
-        class="btn-reset header__close-search"
-        aria-label="закрыть окно поиска"
-      >
-        <div class="header__icon-close"></div>
+        <button
+          class="btn-reset header__close-search"
+          aria-label="закрыть окно поиска"
+        >
+          <div class="header__icon-close"></div>
+        </button>
+      </div>
+      <button class="header__btn search" aria-label="найти">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 26 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="19.5138"
+            y="18.5495"
+            width="8"
+            height="2"
+            transform="rotate(45 19.5138 18.5495)"
+          />
+          <circle cx="11.5" cy="11.5" r="10.5" stroke-width="2" />
+        </svg>
       </button>
     </div>
-    <button class="header__searsh search" aria-label="найти">
-      <svg
-        width="26"
-        height="26"
-        viewBox="0 0 26 26"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect
-          x="19.5138"
-          y="18.5495"
-          width="8"
-          height="2"
-          transform="rotate(45 19.5138 18.5495)"
-        />
-        <circle cx="11.5" cy="11.5" r="10.5" stroke-width="2" />
-      </svg>
-    </button>
   </div>
 </header>

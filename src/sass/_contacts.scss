@@ -2,10 +2,12 @@
 @import 'var';
 
 .contacts {
-  max-width: 1290px;
-  margin: 0 auto;
-  margin-bottom: 68px;
-  padding-top: 5px;
+  margin-bottom: 69px;
+
+  &__container {
+    max-width: 1290px;
+    margin: 0 auto;
+  }
 
   &__wrapper {
     display: grid;
@@ -45,8 +47,8 @@
     flex-direction: column;
   }
 
-  &__title__form{
-    @include  formTitle;
+  &__title__form {
+    @include formTitle;
   }
 
   &__input {
@@ -73,7 +75,16 @@
 
 @media (max-width: $media-xl) {
   .contacts {
-    max-width: 962px;
+    margin-bottom: 71px;
+
+    &__container {
+      max-width: 962px;
+      padding-top: 5px;
+    }
+
+    &__title {
+      margin-bottom: 18px;
+    }
 
     &__wrapper {
       grid-template-columns: 1fr 342px;
@@ -87,15 +98,27 @@
 }
 @media (max-width: $media-lg) {
   .contacts {
-    max-width: 714px;
+    margin-bottom: 48px;
+
+    &__container {
+      max-width: 714px;
+    }
 
     &__wrapper {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 460px 466px;
     }
 
     &__map {
       @include backgroundImage('/img/map_768.jpg');
+    }
+
+    &__request{
+      max-width: 467px;
+    }
+
+    &__title__form{
+      margin-bottom: 5px;
     }
   }
 }

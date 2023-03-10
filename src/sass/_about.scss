@@ -2,7 +2,7 @@
 @import 'var';
 
 .about {
-  margin-bottom: 70px;
+  margin-bottom: 71px;
 
   &__container {
     max-width: 1900px;
@@ -63,6 +63,7 @@
     color: #cacaca;
     background-color: #4A4A4A;
   }
+
   &__btn{
     @include btnPrimary;
   }
@@ -71,19 +72,32 @@
   .about{
     &__container {
       max-width: 1024px;
+      padding: 33px 30px 81px;
     }
+
     &__form {
       flex-direction: column;
       align-content: flex-start;
     }
+
     &__btn{
       margin-right: auto;
     }
+
     &__wrapper {
       max-width: 963px;
     }
+
     &__input {
       margin-bottom: 20px;
+    }
+
+    &__title{
+      margin-bottom: 8px;
+    }
+
+    &__form{
+      max-width: 344px;
     }
   }
 }
@@ -91,10 +105,13 @@
   .about{
     &__container {
       max-width: 768px;
+      padding: 36px 30px 61px;
     }
+
     &__btn{
       margin-right: auto;
     }
+
     &__wrapper {
       max-width: 714px;
     }
@@ -108,6 +125,7 @@
       padding-top: 30px;
       padding-bottom: 68px;
     }
+
     &__wrapper {
       max-width: 278px;
       grid-template-columns: 1fr ;

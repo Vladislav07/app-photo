@@ -1,104 +1,131 @@
 <section id="projects" class="projects">
-  <h2 class="projects__title">Наши проекты</h2>
-  <ul class="projects__list list-reset">
-    <li class="projects__item projects__item__one">
-      <picture>
-        <source srcset="img/projects_01_320.jpg" media="(max-width:576px)" />
-        <source srcset="img/projects_01_1024.jpg" media="(max-width:1279px)" />
-        <img src="img/projects_01.jpg" alt="" />
-      </picture>
+  <div class="container projects__container">
+    <h2 class="projects__title">Наши проекты</h2>
+    <ul class="projects__list list-reset">
+      <li class="projects__item projects__item__one">
+        <picture>
+          <source srcset="img/projects_01_320.jpg" media="(max-width:576px)" />
+          <source
+            srcset="img/projects_01_1024.jpg"
+            media="(max-width:1279px)"
+          />
+          <img src="img/projects_01.jpg" alt="" />
+        </picture>
 
-      <p class="projects__descr">
-        Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными
-        до&nbsp;степени...
-      </p>
-      <div class="projects__date">
-        @@include('./date.html',{ "date":"16 июня"})
-      </div>
-      <span class="projects__label">#пейзаж</span>
-    </li>
-    <li class="projects__item projects__item__second">
-      <picture>
-        <source srcset="img/projects_02_768.jpg" media="(max-width:992px)" />
-        <source srcset="img/projects_02_1024.jpg" media="(max-width:1279px)" />
-        <img src="img/projects_02.jpg" alt="" />
-      </picture>
-      <p class="projects__descr">
-        В&nbsp;своём стремлении улучшить опыт мы&nbsp;упускаем, что явные...
-      </p>
-      <div class="projects__date">
-        @@include('./date.html',{ "date":"28 мая"})
-      </div>
-      <span class="projects__label">#портрет</span>
-    </li>
-    <li class="projects__item projects__item__third">
-      <picture>
-        <source srcset="img/projects_03_320.jpg" media="(max-width:576px)" />
-        <source srcset="img/projects_03_768.jpg" media="(max-width:992px)" />
-        <source srcset="img/projects_03_1024.jpg" media="(max-width:1279px)" />
-        <img src="img/projects_03.jpg" alt="" />
-      </picture>
-      <p class="projects__descr">
-        Равным образом, высокое качество позиционных...
-      </p>
-      <div class="projects__date">
-        @@include('./date.html',{ "date":"19 августа"})
-      </div>
-      <span class="projects__label">#предмет</span>
-    </li>
-    <li class="projects__item projects__item__fourth">
-      <div class="projects__calendar">
-        @@include('./date.html',{ "date":"19 августа"})
-      </div>
-      <h3 class="projects__title__advert">Cемантический разбор</h3>
-      <p class="projects__descr projects__descr__big">
-        
-        В&nbsp;рамках спецификации современных стандартов, интерактивные
-        прототипы
-      </p>
-      <button class="projects__btn">О проекте</button>
-      <span class="projects__label">#fuji</span>
-    </li>
-    <li class="projects__item projects__item__fifth">
-      <div class="projects__calendar">
-        @@include('./date.html',{ "date":"9 апреля"})
-      </div>
-      <h3 class="projects__title__advert">Забвение</h3>
-      <p class="projects__descr projects__descr__big">
-       Играет важную роль в&nbsp;формировании глубокомысленных рассуждений 
-      </p>
-      <button class="projects__btn">О проекте</button>
-      <span class="projects__label">#проектзабвение</span>
-    </li>
-    <li class="projects__item projects__item__sixth">
-      <picture>
-        <source srcset="img/projects_04_320.jpg" media="(max-width:576px)" />
-        <source srcset="img/projects_04_1024.jpg" media="(max-width:1279px)" />
-        <img src="img/projects_04.jpg" alt="" />
-      </picture>
-      <p class="projects__descr">
-        Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день
-        остаются уделом либералов... до&nbsp;степени...
-      </p>
-      <div class="projects__date">
-        @@include('./date.html',{ "date":"30 марта"})
-      </div>
-      <span class="projects__label">#ретуш</span>
-    </li>
-    <li class="projects__item projects__item__seventh">
-      <picture>
-        <source srcset="img/projects_05_320.jpg" media="(max-width:576px)" />
-        <source srcset="img/projects_05_1024.jpg" media="(max-width:1279px)" />
-        <img src="img/projects_05.jpg" alt="" />
-      </picture>
-      <p class="projects__descr">
-        С учётом сложившейся международной обстановки, новая модель
-        организационной…
-      </p>
-      <div class="projects__date">
-        @@include('./date.html',{ "date":"23 февраля"})
-      </div>
-      <span class="projects__label">#портрет</span>
-    </li>
-  </ul>
+        <p class="projects__descr">
+          Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными
+          до&nbsp;степени...
+        </p>
+        <p class="projects__descr__alternative">
+          Синтетически, смешаны с&nbsp;не&nbsp;уникальными...
+        </p>
+        <p class="projects__descr__alternative"></p>
+        <div class="projects__date">
+          @@include('./date.html',{ "date":"16 июня"})
+        </div>
+        <span class="projects__label">#пейзаж</span>
+      </li>
+      <li class="projects__item projects__item__second">
+        <picture>
+          <source srcset="img/projects_02_768.jpg" media="(max-width:992px)" />
+          <source
+            srcset="img/projects_02_1024.jpg"
+            media="(max-width:1279px)"
+          />
+          <img src="img/projects_02.jpg" alt="" />
+        </picture>
+        <p class="projects__descr">
+          В&nbsp;своём стремлении улучшить опыт мы&nbsp;упускаем, что явные...
+        </p>
+        <p class="projects__descr__alternative">
+          В&nbsp;своём стремлении улучшить опыт&nbsp;мы...
+        </p>
+        <div class="projects__date">
+          @@include('./date.html',{ "date":"28 мая"})
+        </div>
+        <span class="projects__label">#портрет</span>
+      </li>
+      <li class="projects__item projects__item__third">
+        <picture>
+          <source srcset="img/projects_03_320.jpg" media="(max-width:576px)" />
+          <source srcset="img/projects_03_768.jpg" media="(max-width:992px)" />
+          <source
+            srcset="img/projects_03_1024.jpg"
+            media="(max-width:1279px)"
+          />
+          <img src="img/projects_03.jpg" alt="" />
+        </picture>
+        <p class="projects__descr">
+          Равным образом, высокое качество позиционных...
+        </p>
+        <p class="projects__descr__alternative">
+          Равным образом, высокое качество позиционных высокотехнологичная
+          концепция общественного уклада
+        </p>
+        <div class="projects__date">
+          @@include('./date.html',{ "date":"19 августа"})
+        </div>
+        <span class="projects__label">#предмет</span>
+      </li>
+      <li class="projects__item projects__item__fourth">
+        <div class="projects__calendar">
+          @@include('./date.html',{ "date":"19 августа"})
+        </div>
+        <h3 class="projects__title__advert">Cемантический разбор</h3>
+        <p class="projects__descr projects__descr__big">
+          В&nbsp;рамках спецификации современных стандартов, интерактивные
+          прототипы
+        </p>
+        <button class="projects__btn">О проекте</button>
+        <span class="projects__label">#fuji</span>
+      </li>
+      <li class="projects__item projects__item__fifth">
+        <div class="projects__calendar">
+          @@include('./date.html',{ "date":"9 апреля"})
+        </div>
+        <h3 class="projects__title__advert">Забвение</h3>
+        <p class="projects__descr projects__descr__big">
+          Играет важную роль в&nbsp;формировании глубокомысленных рассуждений
+        </p>
+        <button class="projects__btn">О проекте</button>
+        <span class="projects__label">#проектзабвение</span>
+      </li>
+      <li class="projects__item projects__item__sixth">
+        <picture>
+          <source srcset="img/projects_04_320.jpg" media="(max-width:576px)" />
+          <source
+            srcset="img/projects_04_1024.jpg"
+            media="(max-width:1279px)"
+          />
+          <img src="img/projects_04.jpg" alt="" />
+        </picture>
+        <p class="projects__descr">
+          Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день
+          остаются уделом либералов... до&nbsp;степени...
+        </p>
+        <div class="projects__date">
+          @@include('./date.html',{ "date":"30 марта"})
+        </div>
+        <span class="projects__label">#ретуш</span>
+      </li>
+      <li class="projects__item projects__item__seventh">
+        <picture>
+          <source srcset="img/projects_05_320.jpg" media="(max-width:576px)" />
+          <source
+            srcset="img/projects_05_1024.jpg"
+            media="(max-width:1279px)"
+          />
+          <img src="img/projects_05.jpg" alt="" />
+        </picture>
+        <p class="projects__descr">
+          С учётом сложившейся международной обстановки, новая модель
+          организационной…
+        </p>
+        <div class="projects__date">
+          @@include('./date.html',{ "date":"23 февраля"})
+        </div>
+        <span class="projects__label">#портрет</span>
+      </li>
+    </ul>
+  </div>
 </section>

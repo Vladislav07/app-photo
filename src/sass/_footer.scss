@@ -5,7 +5,7 @@
   &__container {
     max-width: 1900px;
     margin: 0 auto;
-    padding-top: 24px;
+    padding-top: 26px;
     padding-bottom: 16px;
     background-color: $color-bacground-dark;
   }
@@ -14,7 +14,7 @@
     display: grid;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: 1fr;
     justify-content: space-between;
   }
@@ -24,6 +24,7 @@
       flex-direction: column;
     }
     &__two {
+      // margin-right: 50px;
       justify-self: center;
       max-width: 361px;
       font-size: 16px;
@@ -37,7 +38,7 @@
       line-height: 22px;
       font-weight: 400;
       color: #cacaca;
-      width: 160px;
+      width: 161px;
     }
   }
   &__social {
@@ -48,13 +49,17 @@
     }
   }
   &__sign {
+    font-family: 'TTFirsNeue';
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
     color: #e9e9e9;
   }
-  &__title{
+  &__title {
     margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
   }
 }
 
@@ -62,24 +67,29 @@
   .footer {
     &__container {
       max-width: 1024px;
-
+      padding-top: 23px;
     }
+
     &__wrapper {
+      grid-template-columns:305px 361px 160px;
       max-width: 962px;
+      align-items: center;
     }
   }
 }
+
 @media (max-width: $media-lg) {
   .footer {
     &__container {
       max-width: 768px;
-
     }
+
     &__wrapper {
       max-width: 714px;
       grid-template-columns: 1fr 1fr;
     }
-    &__item__two{
+
+    &__item__two {
       display: none;
     }
   }
@@ -89,21 +99,23 @@
     &__container {
       padding-bottom: 0;
     }
+
     &__wrapper {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
-  
-    } 
-    &__item__one{
+    }
+
+    &__item__one {
       justify-self: center;
     }
+
     &__item__three {
       width: 100%;
       padding-top: 14px;
       padding-bottom: 14px;
       text-align: center;
       justify-self: center;
-      background-color:  #4A4A4A;;
+      background-color: #4a4a4a;
     }
   }
 }
