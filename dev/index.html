@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
     <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -450,7 +451,47 @@
   <div class="container contacts__container">
     <h2 class="contacts__title">Контакты</h2>
     <div class="contacts__wrapper">
-      <div class="contacts__map"></div>
+      <div class="contacts__map">
+        <div class="contacts__modal modal" id="Modal">
+          <div class="modal__content">
+            <h4 class="modal__title">Студия «High pass»</h4>
+            <p class="modal__text">
+              107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр
+              &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82
+            
+            </p>
+              <a href="tel:+749542423532" class="modal__phone"
+              ><svg
+                width="22"
+                height="22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.343 14.098a10.49 10.49 0 01-3.236-.513.896.896 0 00-.926.22l-1.44 1.806c-2.593-1.238-5.023-3.575-6.315-6.261l1.787-1.522a.935.935 0 00.22-.935 10.223 10.223 0 01-.513-3.235.916.916 0 00-.907-.908H3.84c-.495 0-1.091.22-1.091.908 0 8.515 7.086 15.592 15.593 15.592.65 0 .907-.578.907-1.082v-3.162a.916.916 0 00-.907-.908z"
+                  fill="#FF6E30"
+                /></svg>+7&nbsp;495 424-23-532</a>
+          </div>
+          <button type="button" class="modal__btn__close" aria-label="Закрыть">
+            <svg
+              width="20"
+              height="20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="10" cy="10" r="10" fill="#999" />
+              <path
+                fill="#fff"
+                d="M6.207 5.5l8.485 8.485-.707.707L5.5 6.207z"
+              />
+              <path
+                fill="#fff"
+                d="M5.59 13.985L14.077 5.5l.707.707-8.485 8.486z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
       <div class="contacts__request">
         <h4 class="contacts__title__form">Оставить заявку</h4>
         <p class="contacts__descr">

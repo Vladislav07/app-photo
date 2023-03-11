@@ -356,6 +356,8 @@
 
 @media (max-width: $media-sm) {
   .header {
+    margin-bottom: 30px;
+  
     &__container {
       max-width: 320px;
     }

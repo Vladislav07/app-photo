@@ -68,8 +68,13 @@
     color: #fff;
     padding-left: 30px;
     padding-bottom: 30px;
-    padding-top: 23px;
+    padding-top: 14px;
   }
+ 
+  &__item__fifth > &__calendar{
+    margin-bottom: 8px;
+  }
+
 
   &__item__sixth {
     grid-column: 7 / span 3;
@@ -94,7 +99,7 @@
   &__descr {
     max-width: 295px;
     margin-bottom: auto;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
     color: $color-bacground-dark;
   }
@@ -218,6 +223,9 @@
       display: inline-block;
       max-width: 100%;
     }
+    &__item__fifth > .projects__calendar {
+      margin-bottom: 0px;
+  }
   }
 }
 @media (max-width: $media-lg) {

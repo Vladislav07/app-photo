@@ -24,7 +24,7 @@
       flex-direction: column;
     }
     &__two {
-      // margin-right: 50px;
+      margin-right: 50px;
       justify-self: center;
       max-width: 361px;
       font-size: 16px;
@@ -71,10 +71,15 @@
     }
 
     &__wrapper {
-      grid-template-columns:305px 361px 160px;
+      grid-template-columns: 305px 361px 160px;
       max-width: 962px;
       align-items: center;
     }
+
+    &__item__two {
+      margin-right: 0;
+    }
+    
   }
 }
 

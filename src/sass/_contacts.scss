@@ -1,3 +1,4 @@
+@import 'modal';
 @import 'mixin';
 @import 'var';
 
@@ -17,6 +18,7 @@
   }
 
   &__map {
+    position: relative;
     @include backgroundImage('/img/map.jpg');
     height: 460px;
   }
@@ -71,11 +73,16 @@
     margin-right: auto;
     @include btnPrimary;
   }
+
+  &__modal {
+    width: 48%;
+    height: 100%;
+  }
 }
 
 @media (max-width: $media-xl) {
   .contacts {
-    margin-bottom: 71px;
+    margin-bottom: 67px;
 
     &__container {
       max-width: 962px;
@@ -93,6 +100,16 @@
 
     &__map {
       @include backgroundImage('/img/map_1024.jpg');
+      height: 467px;
+    }
+
+    &__text{
+      margin-bottom: 24px;
+    }
+
+    &__modal {
+      width: 100%;
+      height: 34%;
     }
   }
 }

@@ -43,16 +43,6 @@
   color: #fff;
 }
 
-@mixin btnPrimary {
-  padding: 15px 22px;
-  border: none;
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: 700;
-  color: #fff;
-  background-color: $color-standart;
-  cursor: pointer;
-}
 
 @mixin formTitle {
   font-family: 'TTFirsNeue';
@@ -82,4 +72,33 @@
   cursor: pointer;
 }
 
+
+
+  @mixin label-sm {
+    top: 5px;
+    right: 0px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  @mixin btnPrimary {
+  padding: 15px 22px;
+  border: none;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 700;
+  color: #fff;
+  background-color: $color-standart;
+  cursor: pointer;
+}
+
+@mixin btnPrimary-sm {
+  padding: 12px 22px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
 
