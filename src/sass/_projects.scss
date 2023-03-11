@@ -306,10 +306,14 @@
 }
 @media (max-width: $media-sm) {
   .projects {
-    max-width: 278px;
+
+    &__container {
+       max-width: 278px;
+    }
+   
     &__list {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 422px 1fr 1fr 422px;
+      grid-template-rows: 299px 280px 278px 422px 300px 300px 422px;
     }
     &__item__one {
       grid-column: 1;
@@ -325,12 +329,13 @@
     }
     &__item__fourth {
       grid-column: 1;
-      grid-row: 7;
+      grid-row: 4;
       @include backgroundImage('/img/projects_background_01_320.jpg');
+      padding-top: 196px;
     }
     &__item__fifth {
       grid-column: 1;
-      grid-row: 4;
+      grid-row: 7;
       @include backgroundImage('/img/projects_background_02_320.jpg');
     }
 
@@ -342,6 +347,40 @@
     &__item__seventh {
       grid-column: 1;
       grid-row: 6;
+    }
+
+    &__title{
+      @include sectionTitle-sm;
+    }
+
+    &__descr {
+      font-size: 16px;
+    }
+
+    &__label{
+      @include label-sm;
+      top: 5px;
+      right: 5px;
+      padding: 4px 15px;    
+    }
+
+    &__calendar{
+      margin-bottom: 8px;
+    }
+
+    &__descr__big {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    &__title__advert{
+      margin-bottom: 9px;
+    }
+
+    &__btn{
+      font-size: 14px;
+      line-height: 16px;
+      padding:9px 17px ;
     }
   }
 }

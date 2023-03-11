@@ -121,15 +121,44 @@
 
 @media (max-width:$media-sm) {
   .about{
+    margin-bottom: 50px;
+
     &__container {
       padding-top: 30px;
-      padding-bottom: 68px;
+      padding-bottom: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     &__wrapper {
       max-width: 278px;
       grid-template-columns: 1fr ;
       grid-template-rows: 1fr max-content;
+      gap: 21px;
+    }
+
+    &__title{
+      @include sectionTitle-sm;
+    }
+
+    &__descr {
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    &__title__form {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &__input {
+      padding: 13px 23px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__btn {
+      @include btnPrimary-sm;
     }
    
   }
