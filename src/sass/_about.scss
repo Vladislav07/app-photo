@@ -12,7 +12,6 @@
     padding-left: 30px;
     padding-right: 30px;
     background-color: $color-bacground-dark;
-
   }
 
   &__wrapper {
@@ -40,7 +39,7 @@
     color: #cacaca;
   }
 
-  &__img{
+  &__img {
     margin-bottom: 19px;
   }
 
@@ -48,7 +47,6 @@
     @include formTitle;
     margin-bottom: 15px;
     color: #fff;
-   
   }
 
   &__form {
@@ -61,15 +59,40 @@
     width: 100%;
     margin-right: 30px;
     color: #cacaca;
-    background-color: #4A4A4A;
+    background-color: #4a4a4a;
+    transition: color 0.3s ease-in-out;
   }
 
-  &__btn{
+  &__input:hover:not(:focus)::placeholder{
+   color: $color-standart;
+  }
+
+  &__input:focus {
+    outline: 1px solid $color-standart;
+  }
+
+  &__btn {
     @include btnPrimary;
+    transition: background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
+  }
+
+  &__btn:hover:not(:focus) {
+    background-color: $color-accent;
+  }
+
+  &__btn:focus {
+    outline-color: #ce4307;
+    outline: 3px solid $color-standart;
+    outline-offset: -3px;
+  }
+
+  &__btn:active {
+    background-color: $color-active;
   }
 }
+
 @media (max-width: $media-xl) {
-  .about{
+  .about {
     &__container {
       max-width: 1024px;
       padding: 33px 30px 81px;
@@ -80,7 +103,7 @@
       align-content: flex-start;
     }
 
-    &__btn{
+    &__btn {
       margin-right: auto;
     }
 
@@ -92,35 +115,34 @@
       margin-bottom: 20px;
     }
 
-    &__title{
+    &__title {
       margin-bottom: 8px;
     }
 
-    &__form{
+    &__form {
       max-width: 344px;
     }
   }
 }
-@media (max-width:$media-lg) {
-  .about{
+@media (max-width: $media-lg) {
+  .about {
     &__container {
       max-width: 768px;
       padding: 33px 30px 63px;
     }
 
-    &__btn{
+    &__btn {
       margin-right: auto;
     }
 
     &__wrapper {
       max-width: 714px;
     }
-   
   }
 }
 
-@media (max-width:$media-sm) {
-  .about{
+@media (max-width: $media-sm) {
+  .about {
     margin-bottom: 50px;
 
     &__container {
@@ -132,12 +154,12 @@
 
     &__wrapper {
       max-width: 278px;
-      grid-template-columns: 1fr ;
+      grid-template-columns: 1fr;
       grid-template-rows: 1fr max-content;
       gap: 21px;
     }
 
-    &__title{
+    &__title {
       @include sectionTitle-sm;
     }
 
@@ -160,6 +182,5 @@
     &__btn {
       @include btnPrimary-sm;
     }
-   
   }
 }

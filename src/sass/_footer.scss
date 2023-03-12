@@ -61,6 +61,18 @@
     line-height: 22px;
     font-weight: 400;
   }
+
+  &__icon:hover:not(:focus) path {
+    fill: $color_standart;
+  }
+
+  &__icon:focus path {
+    fill: $color-accent;
+  }
+
+  &__icon:active path {
+    fill: $color-active;
+  }
 }
 
 @media (max-width: $media-xl) {
@@ -79,7 +91,6 @@
     &__item__two {
       margin-right: 0;
     }
-    
   }
 }
 
@@ -113,12 +124,11 @@
 
     &__item__one {
       grid-row: 2;
-      background-color: #4A4A4A;
+      background-color: #4a4a4a;
       padding-top: 10px;
       padding-bottom: 10px;
       align-items: center;
     }
-    
 
     &__item__three {
       grid-row: 1;
@@ -129,10 +139,9 @@
       background-color: #202020;
     }
 
-    &__sign{
+    &__sign {
       font-size: 10px;
       line-height: 13px;
     }
   }
-  }
-
+}

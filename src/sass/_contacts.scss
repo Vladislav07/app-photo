@@ -26,7 +26,6 @@
   &__request {
     display: flex;
     flex-direction: column;
-    // width: 410px;
   }
 
   &__title {
@@ -69,9 +68,25 @@
     margin-bottom: 20px;
   }
 
+
   &__btn {
-    margin-right: auto;
     @include btnPrimary;
+     margin-right: auto;   
+    transition: background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
+  }
+
+  &__btn:hover:not(:focus) {
+    background-color: $color-accent;
+  }
+
+  &__btn:focus {
+    outline-color: #CE4307;
+    outline: 3px solid $color-standart;
+    outline-offset: -3px;
+  }
+
+  &__btn:active{
+    background-color: $color-active;
   }
 
   &__modal {

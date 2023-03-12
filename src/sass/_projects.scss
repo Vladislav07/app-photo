@@ -120,12 +120,28 @@
   &__btn {
     margin-right: auto;
     padding: 13px 20px;
-    border: 3px solid $color-standart;
+    outline: 3px solid $color-standart;
     font-size: 16px;
     line-height: 19px;
     font-weight: 700;
     color: #fff;
     background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+
+  &__btn:hover:not(:focus) {
+    background-color: $color-accent;
+    outline: none;
+  }
+
+  &__btn:focus {
+    outline-color: #CE4307;
+    background-color: $color-standart;
+  }
+
+  &__btn:active{
+    background-color: $color-active;
   }
 
   &__descr__alternative {
@@ -136,10 +152,8 @@
     line-height: 22px;
     color: $color-bacground-dark;
   }
-
-  &__calendar {
-  }
 }
+
 .date-created {
   font-size: 12px;
   line-height: 22px;
