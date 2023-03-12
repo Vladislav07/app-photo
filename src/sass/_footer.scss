@@ -103,24 +103,36 @@
   .footer {
     &__container {
       padding-bottom: 0;
+      padding-top: 0;
     }
 
     &__wrapper {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 120px 66px;
     }
 
     &__item__one {
-      justify-self: center;
+      grid-row: 2;
+      background-color: #4A4A4A;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      align-items: center;
     }
+    
 
     &__item__three {
+      grid-row: 1;
       width: 100%;
-      padding-top: 14px;
+      padding-top: 15px;
       padding-bottom: 14px;
       text-align: center;
-      justify-self: center;
-      background-color: #4a4a4a;
+      background-color: #202020;
+    }
+
+    &__sign{
+      font-size: 10px;
+      line-height: 13px;
     }
   }
-}
+  }
+

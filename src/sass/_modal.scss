@@ -78,3 +78,27 @@
     }
   }
 }
+
+@media (max-width: $media-sm) {
+  .modal {
+    padding: 28px 19px 7px;
+
+    &__title{
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+      display: inline-block;
+      margin-bottom: 9px;
+    }
+
+    &__phone{
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

@@ -70,11 +70,10 @@
     padding-bottom: 30px;
     padding-top: 14px;
   }
- 
-  &__item__fifth > &__calendar{
+
+  &__item__fifth > &__calendar {
     margin-bottom: 8px;
   }
-
 
   &__item__sixth {
     grid-column: 7 / span 3;
@@ -149,7 +148,6 @@
 
 @media (max-width: $media-xl) {
   .projects {
-
     &__container {
       max-width: 962px;
       padding-top: 0px;
@@ -225,12 +223,11 @@
     }
     &__item__fifth > .projects__calendar {
       margin-bottom: 0px;
-  }
+    }
   }
 }
 @media (max-width: $media-lg) {
   .projects {
-
     &__container {
       max-width: 714px;
       padding-top: 0px;
@@ -240,8 +237,6 @@
       display: none;
     }
 
-    
-   
     &__list {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: 300px 300px 315px 300px;
@@ -249,7 +244,7 @@
 
     &__item img {
       margin-bottom: 13px;
-  }
+    }
 
     &__item__one {
       grid-column: 1 / span 2;
@@ -306,14 +301,15 @@
 }
 @media (max-width: $media-sm) {
   .projects {
+    margin-bottom: 35px;
 
     &__container {
-       max-width: 278px;
+      max-width: 278px;
     }
-   
+
     &__list {
       grid-template-columns: 1fr;
-      grid-template-rows: 299px 280px 278px 422px 300px 300px 422px;
+      grid-template-rows: 299px 280px 278px 424px 300px 304px 422px;
     }
     &__item__one {
       grid-column: 1;
@@ -327,12 +323,19 @@
       grid-column: 1;
       grid-row: 3;
     }
+
+    &__projects__item__third img {
+      margin-bottom: 12px;
+    }
+
     &__item__fourth {
       grid-column: 1;
       grid-row: 4;
       @include backgroundImage('/img/projects_background_01_320.jpg');
       padding-top: 196px;
+      padding-bottom: 32px;
     }
+
     &__item__fifth {
       grid-column: 1;
       grid-row: 7;
@@ -342,14 +345,16 @@
     &__item__sixth {
       grid-column: 1;
       grid-row: 5;
+      padding-top: 0;
     }
 
     &__item__seventh {
       grid-column: 1;
       grid-row: 6;
+      padding-top: 0;
     }
 
-    &__title{
+    &__title {
       @include sectionTitle-sm;
     }
 
@@ -357,14 +362,14 @@
       font-size: 16px;
     }
 
-    &__label{
+    &__label {
       @include label-sm;
       top: 5px;
       right: 5px;
-      padding: 4px 15px;    
+      padding: 4px 15px;
     }
 
-    &__calendar{
+    &__calendar {
       margin-bottom: 8px;
     }
 
@@ -373,14 +378,14 @@
       line-height: 18px;
     }
 
-    &__title__advert{
+    &__title__advert {
       margin-bottom: 9px;
     }
 
-    &__btn{
+    &__btn {
       font-size: 14px;
       line-height: 16px;
-      padding:9px 17px ;
+      padding: 9px 17px;
     }
   }
 }
