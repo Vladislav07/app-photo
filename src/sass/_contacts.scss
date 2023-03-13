@@ -59,6 +59,21 @@
     background-color: #e9e9e9;
     margin-bottom: 20px;
   }
+  &__input:hover:not(:focus)::placeholder{
+    color: $color-standart;
+   }
+ 
+   &__input:focus {
+     outline: 1px solid $color-standart;
+   }
+
+   &__text:hover:not(:focus)::placeholder{
+    color: $color-standart;
+   }
+ 
+   &__text:focus {
+     outline: 1px solid $color-standart;
+   }
 
   &__text {
     @include formInput;

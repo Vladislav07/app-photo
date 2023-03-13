@@ -2,6 +2,7 @@ let burger = document.querySelector(".burger");
 let menu = document.querySelector(".header__nav");
 let menuLinks=document.querySelectorAll(".nav__link");
 
+
 burger.addEventListener("click", function () {
   burger.classList.toggle("burger--active");
   menu.classList.toggle("header__nav--active");
@@ -23,11 +24,12 @@ let btnCloseSearch=document.querySelector(".header__close-search")
 
 btnSearh.addEventListener("click",
 function () {
-    alert("jjjj");
+
   fieldSearch.classList.add("header__search--active")
 })
 
 btnCloseSearch.addEventListener("click",
 function () {
   fieldSearch.classList.remove("header__search--active")
+
 })
